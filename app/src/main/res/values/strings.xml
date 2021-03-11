@@ -1,3 +1,7 @@
+<!--Values for string constants go here
+    nameCD = the contentDescription for that element-->
 <resources>
     <string name="app_name">Sign_In_Register</string>
+    <string name="backArrowCD">Back arrow</string>
+    <string name="locSelectMessage">Where are you?</string>
 </resources>

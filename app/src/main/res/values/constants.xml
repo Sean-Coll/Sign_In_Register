@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Values for numerical constants go here
+    nameW = the width for that element
+    nameH = the height for that element-->
+<resources>
+    <dimen name="backArrowW">200dp</dimen>
+    <dimen name="backArrowH">40dp</dimen>
+</resources>
