@@ -38,7 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case(R.id.Help): {
-
+                Intent help = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(help);
+                break;
             }
 
             case(R.id.Text_Size): {
