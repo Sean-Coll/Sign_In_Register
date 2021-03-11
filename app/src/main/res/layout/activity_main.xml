@@ -19,7 +19,6 @@
         android:background="@color/white"
         android:backgroundTint="#067502"
         android:drawableTint="@color/teal_200"
-        android:fontFamily="@font/doppio_one"
         android:shadowColor="#050000"
         android:text="Login"
         android:textSize="36sp"
@@ -41,7 +40,6 @@
         android:background="@android:color/white"
         android:backgroundTint="#FF0000"
         android:drawableTint="@color/teal_200"
-        android:fontFamily="@font/doppio_one"
         android:shadowColor="@color/white"
         android:text="Help"
         android:textSize="30sp"
@@ -62,7 +60,6 @@
         android:background="@android:color/white"
         android:backgroundTint="#0000FF"
         android:drawableTint="@color/teal_200"
-        android:fontFamily="@font/doppio_one"
         android:shadowColor="@color/white"
         android:text="Text Size"
         android:textSize="30sp"
@@ -79,7 +76,12 @@
         android:layout_height="345dp"
         app:srcCompat="@drawable/saintjohn"
         tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="42dp" />
-
-
+        tools:layout_editor_absoluteY="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
