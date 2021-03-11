@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/backArrowCD">
+        android:contentDescription="@string/back_arrowCD">
     </ImageView>
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_marginTop="62dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="602dp"
-        android:text="@string/locSelectMessage"
+        android:text="@string/loc_select_message"
         android:textColor="#020202"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +48,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/SJOG_logoCD"/>
 
     <Button
         android:id="@+id/House"
@@ -64,7 +65,8 @@
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:contentDescription="@string/house_iconCD"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

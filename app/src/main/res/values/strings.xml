@@ -2,6 +2,8 @@
     nameCD = the contentDescription for that element-->
 <resources>
     <string name="app_name">Sign_In_Register</string>
-    <string name="backArrowCD">Back arrow</string>
-    <string name="locSelectMessage">Where are you?</string>
+    <string name="back_arrowCD">Back arrow</string>
+    <string name="loc_select_message">Where are you?</string>
+    <string name="SJOG_logoCD">Saint John of God logo</string>
+    <string name="house_iconCD">House icon</string>
 </resources>

@@ -33,8 +33,7 @@ public class LocationSelectionActivity extends AppCompatActivity implements View
        switch(view.getId()) {
 
            case(R.id.Back_Arrow): {
-               Intent back = new Intent(LocationSelectionActivity.this, MainActivity.class);
-               startActivity(back);
+               finish();
                break;
            }
 
