@@ -16,14 +16,15 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="34dp"
         android:layout_marginBottom="86dp"
+        android:tint="#FFFFFF"
+        android:translationZ="90dp"
         app:layout_constraintBottom_toTopOf="@+id/Help"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toEndOf="@+id/Login"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/Login1"
-        android:translationZ="90dp"/>
+        app:srcCompat="@drawable/Login1" />
 
     <Button
         android:id="@+id/Login"
