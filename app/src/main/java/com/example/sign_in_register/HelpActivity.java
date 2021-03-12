@@ -51,4 +51,4 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
-}//Test from Luke
+}//Testing
