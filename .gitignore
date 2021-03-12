@@ -1,2 +1,5 @@
 # Project exclude paths
 /.gradle/
+
+# Local configuration file containing path to sdk
+local.properties

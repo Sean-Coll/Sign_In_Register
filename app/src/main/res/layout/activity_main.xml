@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     tools:context=".MainActivity">
 
 
@@ -16,7 +14,6 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="34dp"
         android:layout_marginBottom="86dp"
-        android:tint="#FFFFFF"
         android:translationZ="90dp"
         app:layout_constraintBottom_toTopOf="@+id/Help"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +21,8 @@
         app:layout_constraintStart_toEndOf="@+id/Login"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/Login1" />
+        app:srcCompat="@drawable/login1"
+        app:tint="#FFFFFF" />
 
     <Button
         android:id="@+id/Login"
@@ -107,39 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2"
-        android:contentDescription="@string/SJOG_logoCD"/><![CDATA[
-
-    />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
+        android:contentDescription="@string/SJOG_logoCD"/>
 
     <TextView
         android:id="@+id/SmallT"
@@ -174,6 +140,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/Text_Size"
         app:layout_constraintTop_toBottomOf="@+id/Login"
-        app:layout_constraintVertical_bias="0.0" />/>
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
