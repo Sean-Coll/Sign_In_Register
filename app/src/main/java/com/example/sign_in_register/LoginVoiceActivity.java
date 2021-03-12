@@ -16,10 +16,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginVoiceActivity extends AppCompatActivity implements View.OnClickListener {
 
-    SpeechRecognition speechRec;
+    SpeechRecognition speechRec; // The speech recognition object from SpeechRecognition.java
     ImageView back;
-    ImageView micIcon;
-    TextView speechOutput;
+    ImageView micIcon; // The trigger for speech recognition
+    TextView speechOutput; // The recognised speech will be displayed here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
         back.setOnClickListener(this);
         micIcon.setOnClickListener(this);
 
+        // Set up speechRec
         speechRec = new SpeechRecognition();
         speechRec.createObjects(this);
         speechRec.checkPermission(this,this);
@@ -49,6 +50,7 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
             }
 
             case(R.id.Mic_Icon): {
+                // Begin speech recognition
                 speechRec.startListening();
                 break;
             }

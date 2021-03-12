@@ -7,9 +7,7 @@
 
 package com.example.sign_in_register;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -17,14 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 
 public class HelpActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView back;
     TextView phoneNo;
-
-    private static final int PHONE_PERMISSION = 1; // Used to check for permission
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
