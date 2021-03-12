@@ -1,8 +1,13 @@
+/* This activity allows the user to tap the number on-screen to bring up their dialler with the
+ * number already filled. The phone number used can be found in @string/SJOG_phone.
+ * Author: Seán Coll
+ * Created: 11/3/21
+ * Last Edited: 12/3/21
+ */
+
 package com.example.sign_in_register;
 
 import android.Manifest;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -19,7 +24,7 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
     ImageView back;
     TextView phoneNo;
 
-    private static final int PHONE_PERMISSION = 1;
+    private static final int PHONE_PERMISSION = 1; // Used to check for permission
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +47,17 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case(R.id.Phone_No): {
-                checkPermission();
+                checkPermission(); // Check for permission
+                // Set the intent to dial the number, not call it
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                // Add the number to the intent to dial
                 callIntent.setData(Uri.parse("tel:"+phoneNo.getText().toString()));
-                startActivity(callIntent);
+                startActivity(callIntent); // Dial the number
                 break;
             }
         }
     }
-
+    // Check if the user has given CALL_PHONE permission otherwise request it
     public void checkPermission()
     {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) !=
