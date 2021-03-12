@@ -5,13 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:id="@+id/LoginSymbol"
+        android:layout_width="237dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="86dp"
+        app:layout_constraintBottom_toTopOf="@+id/Help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toEndOf="@+id/Login"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/Login1"
+        android:translationZ="90dp"/>
+
     <Button
         android:id="@+id/Login"
-        android:layout_width="209dp"
-        android:layout_height="94dp"
+        android:layout_width="333dp"
+        android:layout_height="108dp"
         android:layout_marginStart="133dp"
         android:layout_marginTop="467dp"
         android:layout_marginEnd="135dp"
@@ -19,9 +36,11 @@
         android:background="@color/white"
         android:backgroundTint="#067502"
         android:drawableTint="@color/teal_200"
-        android:shadowColor="#050000"
+        android:gravity="center|left"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        android:shadowColor="#FFFFFF"
         android:text="Login"
-        android:textSize="36sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:backgroundTint="#067502"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,10 +52,11 @@
 
     <Button
         android:id="@+id/Help"
-        android:layout_width="175dp"
+        android:layout_width="139dp"
         android:layout_height="56dp"
         android:layout_marginStart="240dp"
         android:layout_marginTop="675dp"
+        android:layout_marginEnd="10dp"
         android:background="@android:color/white"
         android:backgroundTint="#FF0000"
         android:drawableTint="@color/teal_200"
@@ -47,29 +67,31 @@
         app:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/Text_Size"
-        android:layout_width="175dp"
+        android:layout_width="125dp"
         android:layout_height="56dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="675dp"
-        android:layout_marginEnd="210dp"
+        android:layout_marginEnd="240dp"
         android:background="@android:color/white"
         android:backgroundTint="#0000FF"
         android:drawableTint="@color/teal_200"
         android:shadowColor="@color/white"
-        android:text="Text Size"
         android:textSize="25sp"
         android:textStyle="bold"
         app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"/>
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -84,5 +106,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2"
-        android:contentDescription="@string/SJOG_logoCD"/>
+        android:contentDescription="@string/SJOG_logoCD"/><![CDATA[
+
+    />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
+    <TextView
+        android:id="@+id/SmallT"
+        android:layout_width="18dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="10dp"
+        android:text="T"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Help"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Text_Size"
+        app:layout_constraintTop_toBottomOf="@+id/LoginSymbol"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/BigT"
+        android:layout_width="30dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="148dp"
+        android:text="T"
+        android:textSize="50sp"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Help"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Text_Size"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:layout_constraintVertical_bias="0.0" />/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
