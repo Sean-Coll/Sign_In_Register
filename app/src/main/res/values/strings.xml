@@ -1,12 +1,13 @@
 <!--Values for string constants go here
     nameCD = the contentDescription for that element-->
 <resources>
-    <string name="app_name">Sign_In_Register</string>
+    <string name="app_name">Sign In Register</string>
     <string name="back_arrowCD">Back arrow</string>
     <string name="loc_select_message">Where are you?</string>
     <string name="SJOG_logoCD">Saint John of God logo</string>
     <string name="house_iconCD">House icon</string>
     <string name="SJOG_phone">0000000000</string>
+    <string name="SJOG_phoneCD">Phone number for front office.</string>
     <string name="mic_iconCD">Microphone icon. Tap then say you\'re name</string>
     <string name="tap_message_voice">Tap me</string>
     <string name="tap_mic_arrowCD">Arrow icon. Tap the microphone below.</string>
