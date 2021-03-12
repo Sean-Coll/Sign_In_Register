@@ -109,37 +109,31 @@
 
     <TextView
         android:id="@+id/SmallT"
-        android:layout_width="18dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="208dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="20dp"
+        android:layout_height="47dp"
         android:text="T"
         android:textSize="24sp"
         android:textStyle="bold"
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Help"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Text_Size"
-        app:layout_constraintTop_toBottomOf="@+id/LoginSymbol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/BigT"
         android:layout_width="30dp"
         android:layout_height="61dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="148dp"
         android:text="T"
         android:textSize="50sp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Help"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Text_Size"
-        app:layout_constraintTop_toBottomOf="@+id/Login"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
