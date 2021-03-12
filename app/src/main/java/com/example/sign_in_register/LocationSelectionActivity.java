@@ -39,10 +39,14 @@ public class LocationSelectionActivity extends AppCompatActivity implements View
 
            case(R.id.SaintJohn): {
 
+               break;
            }
 
            case(R.id.House): {
-
+               Intent loginFromHome = new Intent(LocationSelectionActivity.this,
+                       LoginVoiceActivity.class);
+               startActivity(loginFromHome);
+               break;
            }
        }
     }

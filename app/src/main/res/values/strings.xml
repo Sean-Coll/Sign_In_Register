@@ -7,4 +7,5 @@
     <string name="SJOG_logoCD">Saint John of God logo</string>
     <string name="house_iconCD">House icon</string>
     <string name="SJOG_phone">0000000000</string>
+    <string name="mic_iconCD">Microphone icon. Tap then say you\'re name</string>
 </resources>

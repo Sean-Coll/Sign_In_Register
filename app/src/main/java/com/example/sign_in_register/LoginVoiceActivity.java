@@ -9,18 +9,49 @@ package com.example.sign_in_register;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginVoiceActivity extends AppCompatActivity implements View.OnClickListener {
 
+    SpeechRecognition speechRec;
+    ImageView back;
+    ImageView micIcon;
+    TextView speechOutput;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.login_voice);
+
+        back = findViewById(R.id.Back_Arrow);
+        micIcon = findViewById(R.id.Mic_Icon);
+        speechOutput = findViewById(R.id.Speech_Output);
+        back.setOnClickListener(this);
+        micIcon.setOnClickListener(this);
+
+        speechRec = new SpeechRecognition();
+        speechRec.createObjects(this);
+        speechRec.checkPermission(this,this);
+        speechRec.setSpeechOutput(speechOutput);
+        speechRec.setSpeechTrigger(micIcon);
     }
 
     @Override
     public void onClick(View view) {
 
+        switch(view.getId()) {
+            case(R.id.Back_Arrow): {
+                finish();
+                break;
+            }
+
+            case(R.id.Mic_Icon): {
+                speechRec.startListening();
+                break;
+            }
+        }
     }
 }

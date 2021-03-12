@@ -47,7 +47,6 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case(R.id.Phone_No): {
-                checkPermission(); // Check for permission
                 // Set the intent to dial the number, not call it
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 // Add the number to the intent to dial
@@ -56,12 +55,5 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
         }
-    }
-    // Check if the user has given CALL_PHONE permission otherwise request it
-    public void checkPermission()
-    {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) !=
-                PackageManager.PERMISSION_GRANTED) ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.CALL_PHONE}, PHONE_PERMISSION);
     }
 }
