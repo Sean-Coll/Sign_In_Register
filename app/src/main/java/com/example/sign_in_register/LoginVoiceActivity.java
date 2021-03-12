@@ -8,6 +8,8 @@
 package com.example.sign_in_register;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,6 +22,8 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
     ImageView back;
     ImageView micIcon; // The trigger for speech recognition
     TextView speechOutput; // The recognised speech will be displayed here
+    TextView tapMessage;
+    ImageView tapArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +33,32 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
         back = findViewById(R.id.Back_Arrow);
         micIcon = findViewById(R.id.Mic_Icon);
         speechOutput = findViewById(R.id.Speech_Output);
+        tapMessage = findViewById(R.id.Tap_Message_Voice);
+        tapArrow = findViewById(R.id.Tap_Mic_Arrow);
         back.setOnClickListener(this);
         micIcon.setOnClickListener(this);
+
+        speechOutput.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(tapMessage.getText().toString().equals(" ")) {
+                    tapMessage.setText(R.string.say_name);
+                    tapArrow.setAlpha(0f); // Hide the arrow
+                }
+                else {
+                    tapMessage.setText(R.string.tap_message_voice);
+                    tapArrow.setAlpha(1f); // Show the arrow
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
 
         // Set up speechRec
         speechRec = new SpeechRecognition();
@@ -51,7 +79,10 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
 
             case(R.id.Mic_Icon): {
                 // Begin speech recognition
+                speechOutput.setText(" "); // Clear the TextView
                 speechRec.startListening();
+                tapMessage.setText(R.string.say_name);
+                tapArrow.setAlpha(0f); // Hide the arrow
                 break;
             }
         }
