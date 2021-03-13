@@ -2,4 +2,5 @@
 /.gradle/
 
 # Local configuration file containing path to sdk
-local.properties
+android/local.properties
+.android/local.properties
