@@ -9,18 +9,12 @@
 
     <ImageView
         android:id="@+id/LoginSymbol"
-        android:layout_width="237dp"
+        android:layout_width="220dp"
         android:layout_height="133dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginBottom="86dp"
         android:translationZ="90dp"
-        app:layout_constraintBottom_toTopOf="@+id/Help"
+        app:layout_constraintBottom_toTopOf="@id/Help"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toEndOf="@+id/Login"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="87dp"
         app:srcCompat="@drawable/login1"
         app:tint="#FFFFFF" />
 
@@ -48,6 +42,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/LoginAudio"
+        android:src="@drawable/speaker_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/Login"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <Button
         android:id="@+id/Help"
@@ -97,8 +101,7 @@
         android:layout_width="328dp"
         android:layout_height="345dp"
         app:srcCompat="@drawable/saintjohn"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="42dp"
+        android:layout_marginBottom="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

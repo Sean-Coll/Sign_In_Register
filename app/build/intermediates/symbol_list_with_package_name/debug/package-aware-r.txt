@@ -1700,6 +1700,7 @@ drawable purple
 drawable saintjohn
 drawable shapeblue
 drawable sjog_logo2
+drawable speaker_icon
 drawable stjohn
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1716,6 +1717,7 @@ id FUNCTION
 id Help
 id House
 id Login
+id LoginAudio
 id LoginSymbol
 id META
 id Mic_Icon
@@ -2279,6 +2281,10 @@ layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw decrease_text_size
+raw help
+raw increase_text_size
+raw login
 string SJOG_logoCD
 string SJOG_phone
 string SJOG_phoneCD
