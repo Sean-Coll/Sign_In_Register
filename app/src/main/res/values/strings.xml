@@ -14,5 +14,4 @@
     <string name="say_name">Say your name</string>
     <string name="tap_to_call">Tap to call</string>
     <string name="loginCD">Login symbol. Tap to login</string>
-    <string name="speakerCD">Speaker icon. Tap to hear description</string>
 </resources>

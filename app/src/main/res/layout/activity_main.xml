@@ -44,16 +44,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/LoginAudio"
-        android:src="@drawable/speaker_icon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="160dp"
-        app:layout_constraintBottom_toTopOf="@+id/Login"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/speakerCD"/>
-
     <Button
         android:id="@+id/Help"
         android:layout_width="139dp"
@@ -75,16 +65,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/HelpAudio"
-        android:src="@drawable/speaker_icon"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/Help"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/speakerCD"/>
 
     <Button
         android:id="@+id/Text_Size"
@@ -136,17 +116,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/SmallTAudio"
-        android:src="@drawable/speaker_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/SmallT"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/speakerCD"/>
-
     <TextView
         android:id="@+id/BigT"
         android:layout_width="30dp"
@@ -160,14 +129,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/BigTAudio"
-        android:src="@drawable/speaker_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="85dp"
-        app:layout_constraintBottom_toTopOf="@+id/BigT"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/speakerCD"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

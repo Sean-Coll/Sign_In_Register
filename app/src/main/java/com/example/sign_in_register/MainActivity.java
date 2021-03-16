@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
     Button login, help, text;
-    ImageView loginAudio, textDecreaseAudio, textIncreaseAudio, helpAudio;
+    TextView textDecrease, textIncrease;
     CustomSoundPool custSoundPool;
     int loginSound, textDecreaseSound, textIncreaseSound, helpSound;
 
@@ -23,17 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login = findViewById(R.id.Login);
         help = findViewById(R.id.Help);
         text = findViewById(R.id.Text_Size);
-        loginAudio = findViewById(R.id.LoginAudio);
-        textDecreaseAudio = findViewById(R.id.SmallTAudio);
-        textIncreaseAudio = findViewById(R.id.BigTAudio);
-        helpAudio = findViewById(R.id.HelpAudio);
-        login.setOnClickListener(this);
-        help.setOnClickListener(this);
-        text.setOnClickListener(this);
-        loginAudio.setOnClickListener(this);
-        textDecreaseAudio.setOnClickListener(this);
-        textIncreaseAudio.setOnClickListener(this);
-        helpAudio.setOnClickListener(this);
+        textDecrease = findViewById(R.id.SmallT);
+        textIncrease = findViewById(R.id.BigT);
+
+        // Set up onClick and onLongClick listeners
+        setUpClickListeners(login);
+        setUpClickListeners(help);
+        setUpClickListeners(textDecrease);
+        setUpClickListeners(textIncrease);
+        setUpClickListeners(help);
 
         // SoundPool creation and loading
         setUpSoundPool();
@@ -61,26 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case(R.id.Text_Size): {
                 break;
             }
-
-            case(R.id.LoginAudio): {
-                custSoundPool.play(loginSound);
-                break;
-            }
-
-            case(R.id.SmallTAudio): {
-                custSoundPool.play(textDecreaseSound);
-                break;
-            }
-
-            case(R.id.BigTAudio): {
-                custSoundPool.play(textIncreaseSound);
-                break;
-            }
-
-            case(R.id.HelpAudio): {
-                custSoundPool.play(helpSound);
-                break;
-            }
         }
     }
 
@@ -100,5 +78,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestart() {
         super.onRestart();
         setUpSoundPool(); // Re-create the SoundPool
+    }
+
+    @Override
+    public boolean onLongClick(View view) {
+        switch(view.getId()) {
+
+            case(R.id.Login): {
+                custSoundPool.play(loginSound);
+                break;
+            }
+
+            case(R.id.Help): {
+                custSoundPool.play(helpSound);
+                break;
+            }
+
+            case(R.id.Text_Size): {
+                break;
+            }
+
+            case(R.id.SmallT): {
+                custSoundPool.play(textDecreaseSound);
+                break;
+            }
+
+            case(R.id.BigT): {
+                custSoundPool.play(textIncreaseSound);
+                break;
+            }
+        }
+        return true;
+    }
+
+    // Sets up the onClick and onLongClick listeners for the View passed in
+    public void setUpClickListeners(View view) {
+        view.setOnClickListener(this);
+        view.setOnLongClickListener(this);
     }
 }
