@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button text;
     ImageView loginAudio;
     SoundPool soundPool;
+    CustomSoundPool custSoundPool;
     int loginSound, textIncreaseSound, textDecreaseSound, helpSound;
 
     @Override
@@ -34,17 +35,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginAudio.setOnClickListener(this);
 
         // SoundPool creation and loading
-        AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_ASSISTANCE_ACCESSIBILITY)
-                .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
-                .build();
+//        AudioAttributes audioAttributes = new AudioAttributes.Builder()
+//                .setUsage(AudioAttributes.USAGE_ASSISTANCE_ACCESSIBILITY)
+//                .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
+//                .build();
+//
+//        soundPool = new SoundPool.Builder()
+//                .setMaxStreams(1)
+//                .setAudioAttributes(audioAttributes)
+//                .build();
+//
+//        loginSound = soundPool.load(this, R.raw.login, 1);
 
-        soundPool = new SoundPool.Builder()
-                .setMaxStreams(1)
-                .setAudioAttributes(audioAttributes)
-                .build();
+        custSoundPool = new CustomSoundPool();
+        custSoundPool.setCon(this);
+        custSoundPool.initialise();
 
-        loginSound = soundPool.load(this, R.raw.login, 1);
+        loginSound = custSoundPool.load(R.raw.login, 1);
 
     }
 
@@ -54,14 +61,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(view.getId()) {
 
             case(R.id.Login): {
-                soundPool.release();
+//                soundPool.release();
                 Intent locSelect = new Intent(MainActivity.this, LocationSelectionActivity.class);
                 startActivity(locSelect);
                 break;
             }
 
             case(R.id.Help): {
-                soundPool.release();
+//                soundPool.release();
                 Intent help = new Intent(MainActivity.this, HelpActivity.class);
                 startActivity(help);
                 break;
@@ -72,7 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case(R.id.LoginAudio): {
-                soundPool.play(loginSound, 1, 1, 1, 0, 1);
+//                soundPool.play(loginSound, 1, 1, 1, 0, 1);
+                custSoundPool.play(loginSound);
             }
         }
     }
