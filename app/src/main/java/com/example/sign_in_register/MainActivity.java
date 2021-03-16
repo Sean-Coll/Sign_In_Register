@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case(R.id.Text_Size): {
-
+                break;
             }
 
             case(R.id.LoginAudio): {

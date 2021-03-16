@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/LoginSymbol"
-        android:layout_width="220dp"
+        android:layout_width="200dp"
         android:layout_height="133dp"
         android:translationZ="90dp"
         app:layout_constraintBottom_toTopOf="@id/Help"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="87dp"
+        android:layout_marginBottom="69dp"
         app:srcCompat="@drawable/login1"
         app:tint="#FFFFFF"
         android:contentDescription="@string/loginCD"/>
