@@ -1,5 +1,7 @@
 com/example/sign_in_register/LocationSelectionActivity.java
  com.example.sign_in_register.LocationSelectionActivity
+com/example/sign_in_register/CustomSoundPool.java
+ com.example.sign_in_register.CustomSoundPool
 com/example/sign_in_register/BuildConfig.java
  com.example.sign_in_register.BuildConfig
 com/example/sign_in_register/SpeechRecognition.java
@@ -10,7 +12,5 @@ com/example/sign_in_register/HelpActivity.java
 com/example/sign_in_register/LoginVoiceActivity.java
  com.example.sign_in_register.LoginVoiceActivity
  com.example.sign_in_register.LoginVoiceActivity$1
-com/example/sign_in_register/CustomSoundPool.java
- com.example.sign_in_register.CustomSoundPool
 com/example/sign_in_register/MainActivity.java
  com.example.sign_in_register.MainActivity
