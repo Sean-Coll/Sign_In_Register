@@ -1712,14 +1712,12 @@ id BOTTOM_END
 id BOTTOM_START
 id Back_Arrow
 id BigT
-id BigTAudio
 id CTRL
+id Evac_Message
 id FUNCTION
 id Help
-id HelpAudio
 id House
 id Login
-id LoginAudio
 id LoginSymbol
 id META
 id Mic_Icon
@@ -1732,7 +1730,6 @@ id SHOW_PROGRESS
 id SYM
 id SaintJohn
 id SmallT
-id SmallTAudio
 id Speech_Output
 id TOP_END
 id TOP_START
@@ -2329,6 +2326,7 @@ string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
 string error_icon_content_description
+string evac_message
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -2396,7 +2394,6 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string say_name
 string search_menu_title
-string speakerCD
 string status_bar_notification_info_overflow
 string tap_message_voice
 string tap_mic_arrowCD
