@@ -6,40 +6,76 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.SeekBar;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
-    Button login, help, text;
-    TextView textDecrease, textIncrease;
+    SeekBar seekbar;
+    int loginSound, textDecreaseSound, textIncreaseSound, helpSound, textsize;
     CustomSoundPool custSoundPool;
-    int loginSound, textDecreaseSound, textIncreaseSound, helpSound;
+    boolean inshow = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        login = findViewById(R.id.Login);
-        help = findViewById(R.id.Help);
-        text = findViewById(R.id.Text_Size);
-        textDecrease = findViewById(R.id.SmallT);
-        textIncrease = findViewById(R.id.BigT);
+        Button login = (Button)findViewById(R.id.Login);
+        Button help = (Button)findViewById(R.id.Help);
+        Button text_size_change = (Button) findViewById(R.id.Textsize);
 
         // Set up onClick and onLongClick listeners
         setUpClickListeners(login);
         setUpClickListeners(help);
-        setUpClickListeners(textDecrease);
-        setUpClickListeners(textIncrease);
-        setUpClickListeners(help);
+        setUpClickListeners(text_size_change);
 
-        // SoundPool creation and loading
-        setUpSoundPool();
+        //for now test 12 as default, we will store this on server
+        textsize = 12;
+
+        login.setTextSize(textsize);
+        help.setTextSize(textsize);
+        text_size_change.setTextSize(textsize);
+
+        seekbar = (SeekBar)findViewById(R.id.textchange);
+        seekbar.setProgress(textsize);
+        seekbar.setVisibility(View.GONE);    //hide seek bar as default
+
+
+        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                login.setTextSize(seekbar.getProgress());
+                help.setTextSize(seekbar.getProgress());
+                text_size_change.setTextSize(seekbar.getProgress());
+                textsize = seekbar.getProgress();
+                seekbar.setProgress(textsize);
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                //start move but its not necessary
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                //make toast to show the size after changing
+                Toast size_now = Toast.makeText(getApplicationContext(), "Text size now are: "+textsize,Toast.LENGTH_SHORT);
+                size_now.show();
+                seekbar.setVisibility(View.GONE);
+                inshow = false;
+            }
+        });
+
+
     }
 
     @Override
     public void onClick(View view) {
 
+        // SoundPool creation and loading
+        setUpSoundPool();
         switch(view.getId()) {
 
             case(R.id.Login): {
@@ -51,12 +87,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case(R.id.Help): {
                 custSoundPool.release();
-                Intent help = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(help);
+                Intent helps = new Intent(MainActivity.this, HelpActivity.class);
+                startActivity(helps);
                 break;
             }
 
-            case(R.id.Text_Size): {
+            case(R.id.Textsize): {
+
+                if(inshow == false)
+                {
+                    seekbar.setVisibility(View.VISIBLE);    //show seek bar
+                    inshow = true;
+                }else  {
+                    seekbar.setVisibility(View.GONE);    //hide seek bar
+                    inshow = false;
+                }
+
                 break;
             }
         }
@@ -91,20 +137,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case(R.id.Help): {
                 custSoundPool.play(helpSound);
-                break;
-            }
-
-            case(R.id.Text_Size): {
-                break;
-            }
-
-            case(R.id.SmallT): {
-                custSoundPool.play(textDecreaseSound);
-                break;
-            }
-
-            case(R.id.BigT): {
-                custSoundPool.play(textIncreaseSound);
                 break;
             }
         }
