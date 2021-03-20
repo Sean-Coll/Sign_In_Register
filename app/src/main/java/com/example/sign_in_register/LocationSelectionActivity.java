@@ -19,6 +19,8 @@ public class LocationSelectionActivity extends AppCompatActivity implements View
        super.onCreate(savedInstanceState);
        setContentView(R.layout.homeorcampus);
 
+
+
        back = findViewById(R.id.Back_Arrow);
        saintJ = findViewById(R.id.SaintJohn);
        house = findViewById(R.id.House);
@@ -29,6 +31,9 @@ public class LocationSelectionActivity extends AppCompatActivity implements View
 
     @Override
     public void onClick(View view) {
+
+        Intent textsize = getIntent();
+        int sizenow = textsize.getExtras().getInt("textsize");
 
        switch(view.getId()) {
 
@@ -45,6 +50,7 @@ public class LocationSelectionActivity extends AppCompatActivity implements View
            case(R.id.House): {
                Intent loginFromHome = new Intent(LocationSelectionActivity.this,
                        LoginVoiceActivity.class);
+               loginFromHome.putExtra("textsize",sizenow);
                startActivity(loginFromHome);
                break;
            }

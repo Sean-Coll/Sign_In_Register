@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
     SeekBar seekbar;
-    int loginSound, textDecreaseSound, textIncreaseSound, helpSound, textsize;
+    int loginSound, textDecreaseSound, textIncreaseSound, helpSound, sizenow;
     CustomSoundPool custSoundPool;
     boolean inshow = false;
 
@@ -25,20 +25,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button help = (Button)findViewById(R.id.Help);
         Button text_size_change = (Button) findViewById(R.id.Textsize);
 
+        //for now test 12 as default, we will store this on server
+        sizenow = 12;
+
         // Set up onClick and onLongClick listeners
         setUpClickListeners(login);
         setUpClickListeners(help);
         setUpClickListeners(text_size_change);
 
-        //for now test 12 as default, we will store this on server
-        textsize = 12;
-
-        login.setTextSize(textsize);
-        help.setTextSize(textsize);
-        text_size_change.setTextSize(textsize);
+        login.setTextSize(sizenow);
+        help.setTextSize(sizenow);
+        text_size_change.setTextSize(sizenow);
 
         seekbar = (SeekBar)findViewById(R.id.textchange);
-        seekbar.setProgress(textsize);
+        seekbar.setProgress(sizenow);
         seekbar.setVisibility(View.GONE);    //hide seek bar as default
 
 
@@ -48,9 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 login.setTextSize(seekbar.getProgress());
                 help.setTextSize(seekbar.getProgress());
                 text_size_change.setTextSize(seekbar.getProgress());
-                textsize = seekbar.getProgress();
-                seekbar.setProgress(textsize);
-
+                sizenow = seekbar.getProgress();
+                seekbar.setProgress(sizenow);
             }
 
             @Override
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 //make toast to show the size after changing
-                Toast size_now = Toast.makeText(getApplicationContext(), "Text size now are: "+textsize,Toast.LENGTH_SHORT);
+                Toast size_now = Toast.makeText(getApplicationContext(), "Text size now are: "+sizenow,Toast.LENGTH_SHORT);
                 size_now.show();
                 seekbar.setVisibility(View.GONE);
                 inshow = false;
@@ -81,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case(R.id.Login): {
                 custSoundPool.release();
                 Intent locSelect = new Intent(MainActivity.this, LocationSelectionActivity.class);
+                locSelect.putExtra("textsize",sizenow);
                 startActivity(locSelect);
                 break;
             }

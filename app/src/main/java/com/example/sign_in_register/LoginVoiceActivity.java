@@ -7,10 +7,12 @@
 
 package com.example.sign_in_register;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,10 +22,10 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
 
     SpeechRecognition speechRec; // The speech recognition object from SpeechRecognition.java
     ImageView back;
-    ImageView micIcon; // The trigger for speech recognition
+    Button micIcon; // The trigger for speech recognition
     TextView speechOutput; // The recognised speech will be displayed here
     TextView tapMessage;
-    ImageView tapArrow;
+    int textsize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +36,14 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
         micIcon = findViewById(R.id.Mic_Icon);
         speechOutput = findViewById(R.id.Speech_Output);
         tapMessage = findViewById(R.id.Tap_Message_Voice);
-        tapArrow = findViewById(R.id.Tap_Mic_Arrow);
         back.setOnClickListener(this);
         micIcon.setOnClickListener(this);
+
+
+        Intent reciever = getIntent();
+        textsize = reciever.getIntExtra("textsize",12);
+
+        tapMessage.setTextSize(textsize);
 
         speechOutput.addTextChangedListener(new TextWatcher() {
             @Override
@@ -47,11 +54,11 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(tapMessage.getText().toString().equals(" ")) {
                     tapMessage.setText(R.string.say_name);
-                    tapArrow.setAlpha(0f); // Hide the arrow
+
                 }
                 else {
                     tapMessage.setText(R.string.tap_message_voice);
-                    tapArrow.setAlpha(1f); // Show the arrow
+                    tapMessage.setTextSize(textsize);
                 }
             }
 
@@ -82,7 +89,6 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
                 speechOutput.setText(" "); // Clear the TextView
                 speechRec.startListening();
                 tapMessage.setText(R.string.say_name);
-                tapArrow.setAlpha(0f); // Hide the arrow
                 break;
             }
         }
