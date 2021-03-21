@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:orderInCategory="0"
+        android:id="@+id/bottombar_timtable"
+        android:icon="@drawable/timetable_icon"
+        android:title="@string/Timetable"
+        />
+
+    <item
+        android:orderInCategory="1"
+        android:id="@+id/bottombar_emergency"
+        android:icon="@drawable/emergency_icon"
+        android:title="@string/Emergency"
+        />
+
+    <item
+        android:orderInCategory="2"
+        android:id="@+id/bottombar_person"
+        android:icon="@drawable/person_icon"
+        android:title="@string/person"
+        />
+
+    <item
+        android:orderInCategory="3"
+        android:id="@+id/bottombar_setting"
+        android:icon="@drawable/setting_icon"
+        android:title="@string/Setting"
+        />
+</menu>

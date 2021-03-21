@@ -39,6 +39,8 @@
         </activity>
         <activity android:name="com.example.sign_in_register.LoginVoiceActivity" >
         </activity>
+        <activity android:name="com.example.sign_in_register.logedpage" >
+        </activity>
     </application>
 
 </manifest>

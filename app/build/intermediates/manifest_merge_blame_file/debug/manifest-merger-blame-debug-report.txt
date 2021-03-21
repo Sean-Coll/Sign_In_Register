@@ -25,7 +25,7 @@
 16-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:10:22-72
 17
 18    <application
-18-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:13:5-30:19
+18-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:13:5-31:19
 19        android:allowBackup="true"
 19-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:14:9-35
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -69,6 +69,10 @@
 40-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:29:9-66
 40-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:29:19-53
 41        </activity>
-42    </application>
-43
-44</manifest>
+42        <activity android:name="com.example.sign_in_register.logedpage" >
+42-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:30:9-57
+42-->E:\dadfile\Sign_In_Register\app\src\main\AndroidManifest.xml:30:19-44
+43        </activity>
+44    </application>
+45
+46</manifest>
