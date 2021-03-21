@@ -12,7 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
     SeekBar seekbar;
-    int loginSound, textDecreaseSound, textIncreaseSound, helpSound, sizenow;
+    int loginSound, changeTextSound, helpSound, sizenow;
+    Button login, help, text_size_change;
     CustomSoundPool custSoundPool;
     boolean inshow = false;
 
@@ -21,17 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button login = (Button)findViewById(R.id.Login);
-        Button help = (Button)findViewById(R.id.Help);
-        Button text_size_change = (Button) findViewById(R.id.Textsize);
+        setUpViews();
+        setUpSoundPool();
 
         //for now test 12 as default, we will store and read this dataset on server
         sizenow = 12;
-
-        // Set up onClick and onLongClick listeners
-        setUpClickListeners(login);
-        setUpClickListeners(help);
-        setUpClickListeners(text_size_change);
 
         login.setTextSize(sizenow);
         help.setTextSize(sizenow);
@@ -116,8 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         custSoundPool.initialise();
 
         loginSound = custSoundPool.load(R.raw.login);
-        textDecreaseSound = custSoundPool.load(R.raw.decrease_text_size);
-        textIncreaseSound = custSoundPool.load(R.raw.increase_text_size);
+        changeTextSound = custSoundPool.load(R.raw.change_text_size);
         helpSound = custSoundPool.load(R.raw.help);
     }
 
@@ -140,8 +134,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 custSoundPool.play(helpSound);
                 break;
             }
+
+            case(R.id.Textsize): {
+                custSoundPool.play(changeTextSound);
+                break;
+            }
         }
         return true;
+    }
+
+    // Sets up all views by with findViewById() and sets up click listeners
+    public void setUpViews() {
+        login = (Button)findViewById(R.id.Login);
+        help = (Button)findViewById(R.id.Help);
+        text_size_change = (Button) findViewById(R.id.Textsize);
+
+        // Set up onClick and onLongClick listeners
+        setUpClickListeners(login);
+        setUpClickListeners(help);
+        setUpClickListeners(text_size_change);
     }
 
     // Sets up the onClick and onLongClick listeners for the View passed in

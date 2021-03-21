@@ -1,242 +1,238 @@
 [
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\raw_increase_text_size.mp3.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\raw\\increase_text_size.mp3"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_purple.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/purple.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_login.mp3.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/raw/login.mp3"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_arrow.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\back_arrow.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_voicebutton.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/voicebutton.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_stjohn.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/stjohn.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_help_page.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\help_page.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/xml_root_preferences.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/xml/root_preferences.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_timetable_icon.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\timetable_icon.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_adminpage.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/adminpage.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\background.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_timetable_icon.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/timetable_icon.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login1.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\login1.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_clouds.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\clouds.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_help_page.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/help_page.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_person_icon.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\person_icon.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_blueshape.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/blueshape.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_voicebutton_pressed.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\voicebutton_pressed.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_help.mp3.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/raw/help.mp3"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_setting.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_saintjohn.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/saintjohn.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_flowers.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\flowers.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_flatblue.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/flatblue.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blueshape.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\blueshape.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_voice.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\login_voice.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_microphone_icon.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/microphone_icon.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\xml_root_preferences.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\xml\\root_preferences.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_fragment_person.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/fragment_person.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_voicebutton.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\voicebutton.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backarrow.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\backarrow.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_background.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/background.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\raw_login.mp3.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\raw\\login.mp3"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_clouds.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/clouds.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sjog_logo2.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\sjog_logo2.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_whitey.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/whitey.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_setting_icon.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\setting_icon.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_change_text_size.mp3.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/raw/change_text_size.mp3"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\color_bg_tab.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\color\\bg_tab.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_setting_icon.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/setting_icon.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_emergency.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\fragment_emergency.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_emergency_icon.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/emergency_icon.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_house.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable-v24\\house.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_login_voice.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/login_voice.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_greenshape.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\greenshape.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_homeorcampus.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/homeorcampus.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bluegrey.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\bluegrey.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_person_icon.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/person_icon.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_saintjohn.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\saintjohn.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_backarrow.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/backarrow.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_white_background_2.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/white_background_2.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_timetable.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\fragment_timetable.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_back_arrow.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/back_arrow.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_person.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\fragment_person.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_fragment_setting.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/fragment_setting.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_stjohn.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\stjohn.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_purple.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\purple.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_emergency_icon.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\emergency_icon.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_fragment_timetable.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/fragment_timetable.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_flatblue.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\flatblue.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_login1.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/login1.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_voicebutton_unpressed.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\voicebutton_unpressed.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_logedpage.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\logedpage.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_voicebutton_pressed.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/voicebutton_pressed.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/menu_bottombar.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/menu/bottombar.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\raw_decrease_text_size.mp3.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\raw\\decrease_text_size.mp3"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_flowers.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/flowers.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_microphone_icon.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\microphone_icon.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_green_tick.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/green_tick.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shapeblue.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\shapeblue.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_logedpage.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/logedpage.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\raw_help.mp3.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\raw\\help.mp3"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_fragment_emergency.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/fragment_emergency.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_homeorcampus.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\homeorcampus.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable-v24_house.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable-v24/house.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_speaker_icon.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\speaker_icon.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_voicebutton_unpressed.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/voicebutton_unpressed.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_greenshape.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/greenshape.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_green_tick.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\green_tick.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_speaker_icon.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/speaker_icon.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loginbutton.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\loginbutton.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_bluegrey.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/bluegrey.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_white_background_2.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\white_background_2.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_sjog_logo2.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/sjog_logo2.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottombar.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\menu\\bottombar.xml"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_shapeblue.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/shapeblue.jpg"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whitey.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\whitey.jpg"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/color_bg_tab.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/color/bg_tab.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_adminpage.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\adminpage.xml"
-    },
-    {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_loginbutton.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/loginbutton.xml"
     }
 ]

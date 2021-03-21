@@ -2419,9 +2419,8 @@ menu bottombar
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
-raw decrease_text_size
+raw change_text_size
 raw help
-raw increase_text_size
 raw login
 string Emergency
 string SJOG_logoCD
