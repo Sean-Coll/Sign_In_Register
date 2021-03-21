@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button help = (Button)findViewById(R.id.Help);
         Button text_size_change = (Button) findViewById(R.id.Textsize);
 
-        //for now test 12 as default, we will store this on server
+        //for now test 12 as default, we will store and read this dataset on server
         sizenow = 12;
 
         // Set up onClick and onLongClick listeners
@@ -77,9 +77,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setUpSoundPool();
         switch(view.getId()) {
 
+            //origin code changed for test loged page : Intent locSelect = new Intent(MainActivity.this, LocationSelectionActivity.class);
             case(R.id.Login): {
                 custSoundPool.release();
-                Intent locSelect = new Intent(MainActivity.this, LocationSelectionActivity.class);
+                Intent locSelect = new Intent(MainActivity.this, logedpage.class);
                 locSelect.putExtra("textsize",sizenow);
                 startActivity(locSelect);
                 break;
