@@ -1,5 +1,5 @@
 /* This class provides simplified use of the SoundPool class which is used to play a collection
- * of short audio files. The sequence for setting up a CustomSoundPoll is:
+ * of short audio files. The sequence for setting up a CustomSoundPool is:
  * CustomSoundPool() the default constructor
  * setCon(Context con) this sets the context for the other methods. Calling this is required for
  * the object to work.

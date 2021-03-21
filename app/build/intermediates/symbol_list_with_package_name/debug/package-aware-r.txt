@@ -2420,8 +2420,12 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw change_text_size
+raw emergency
 raw help
 raw login
+raw profile
+raw settings
+raw timetable
 string Emergency
 string SJOG_logoCD
 string SJOG_phone
