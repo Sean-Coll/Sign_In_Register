@@ -8,7 +8,7 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sign_In_Register">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,7 +27,6 @@
         <activity android:name=".LocationSelectionActivity"> </activity>
         <activity android:name=".HelpActivity"> </activity>
         <activity android:name=".LoginVoiceActivity"> </activity>
-        <activity android:name=".logedpage"> </activity>
     </application>
 
 </manifest>

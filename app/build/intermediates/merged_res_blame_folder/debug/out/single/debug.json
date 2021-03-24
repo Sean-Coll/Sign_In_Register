@@ -8,6 +8,10 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_mainpage.xml.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\mainpage.xml"
+    },
+    {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_arrow.png.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\back_arrow.png"
     },
@@ -36,12 +40,12 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\login1.png"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_clouds.jpg.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\clouds.jpg"
-    },
-    {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_person_icon.png.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\person_icon.png"
+    },
+    {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_clouds.jpg.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\clouds.jpg"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -60,6 +64,10 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\flowers.jpg"
     },
     {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_camera_icon.png.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\camera_icon.png"
+    },
+    {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_blueshape.jpg.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\blueshape.jpg"
     },
@@ -76,12 +84,16 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\voicebutton.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_backarrow.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\backarrow.xml"
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sjog_building.jpg.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\sjog_building.jpg"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\raw_login.mp3.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\raw\\login.mp3"
+    },
+    {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_signin.xml.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\fragment_signin.xml"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sjog_logo2.png.flat",
@@ -116,16 +128,16 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\bluegrey.jpg"
     },
     {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circlebutton_tiny_pressed.xml.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\circlebutton_tiny_pressed.xml"
+    },
+    {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_saintjohn.png.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\saintjohn.png"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_timetable.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\fragment_timetable.xml"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_person.xml.flat",
@@ -162,10 +174,6 @@
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_voicebutton_unpressed.xml.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\voicebutton_unpressed.xml"
-    },
-    {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_logedpage.xml.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\logedpage.xml"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -212,6 +220,10 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circlebutton_tiny_unpressed.xml.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\circlebutton_tiny_unpressed.xml"
+    },
+    {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_green_tick.png.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\green_tick.png"
     },
@@ -238,5 +250,9 @@
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circlebutton_tiny.xml.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\circlebutton_tiny.xml"
     }
 ]

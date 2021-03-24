@@ -33,11 +33,9 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.login_voice);
 
         back = findViewById(R.id.Back_Arrow);
-        micIcon = findViewById(R.id.Mic_Icon);
         speechOutput = findViewById(R.id.Speech_Output);
         tapMessage = findViewById(R.id.Tap_Message_Voice);
         back.setOnClickListener(this);
-        micIcon.setOnClickListener(this);
 
 
         Intent reciever = getIntent();

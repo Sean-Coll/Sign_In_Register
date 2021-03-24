@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- we actually drawed 4 circles here and put them togther with same padding -->
+<!-- we use layer list to set item at one classes -->
+<!-- different changes happend at where i am not sure,notice that we cannot use white as center circle -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- outer circle -->
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:bottom="5dp"
+                android:left="5dp"
+                android:right="5dp"
+                android:top="5dp" />
+            <solid android:color="#40CCCCCC" />
+        </shape>
+    </item>
+
+
+    <!-- middle circle -->
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:bottom="5dp"
+                android:left="5dp"
+                android:right="5dp"
+                android:top="5dp" />
+            <solid android:color="#50CCCCCC" />
+        </shape>
+    </item>
+
+
+    <!-- inner circle -->
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:bottom="5dp"
+                android:left="5dp"
+                android:right="5dp"
+                android:top="5dp" />
+            <solid android:color="#70CCCCCC" />
+        </shape>
+    </item>
+
+
+    <!-- center circle -->
+    <item>
+        <shape android:shape="oval">
+            <padding
+                android:bottom="5dp"
+                android:left="5dp"
+                android:right="5dp"
+                android:top="5dp" />
+            <solid android:color="#99ffffff" />
+        </shape>
+    </item>
+
+
+    <item>
+        <shape android:shape="oval"
+            android:useLevel="false">
+            <size
+                android:width="80dp"
+                android:height="80dp" />
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+
+    </item>
+
+
+</layer-list>

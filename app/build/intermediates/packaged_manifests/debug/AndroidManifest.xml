@@ -14,6 +14,7 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -26,7 +27,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Sign_In_Register" >
-        <activity android:name="com.example.sign_in_register.MainActivity" >
+        <activity android:name="com.example.sign_in_register.MainPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,8 +39,6 @@
         <activity android:name="com.example.sign_in_register.HelpActivity" >
         </activity>
         <activity android:name="com.example.sign_in_register.LoginVoiceActivity" >
-        </activity>
-        <activity android:name="com.example.sign_in_register.logedpage" >
         </activity>
     </application>
 

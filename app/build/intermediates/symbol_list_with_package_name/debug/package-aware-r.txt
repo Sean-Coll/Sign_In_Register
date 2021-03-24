@@ -1710,7 +1710,6 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable back_arrow
-drawable backarrow
 drawable background
 drawable bluegrey
 drawable blueshape
@@ -1722,6 +1721,10 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable camera_icon
+drawable circlebutton_tiny
+drawable circlebutton_tiny_pressed
+drawable circlebutton_tiny_unpressed
 drawable clouds
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1785,6 +1788,7 @@ drawable purple
 drawable saintjohn
 drawable setting_icon
 drawable shapeblue
+drawable sjog_building
 drawable sjog_logo2
 drawable speaker_icon
 drawable stjohn
@@ -1802,6 +1806,9 @@ id BOTTOM_END
 id BOTTOM_START
 id Back_Arrow
 id CTRL
+id Curren_Time
+id Display_Image
+id Emergency_call
 id Evac_Message
 id FUNCTION
 id Help
@@ -1811,6 +1818,7 @@ id META
 id Mic_Icon
 id NO_DEBUG
 id Phone_No
+id QR_sign_in
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1822,6 +1830,8 @@ id TOP_END
 id TOP_START
 id Tap_Message_Voice
 id Textsize
+id Titile
+id Voice_Sign_in
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1897,7 +1907,7 @@ id blocking
 id bottom
 id bottombar
 id bottombar_emergency
-id bottombar_person
+id bottombar_profile
 id bottombar_setting
 id bottombar_timtable
 id bounce
@@ -2318,12 +2328,12 @@ layout expand_button
 layout fragment_emergency
 layout fragment_person
 layout fragment_setting
-layout fragment_timetable
+layout fragment_signin
 layout help_page
 layout homeorcampus
 layout image_frame
-layout logedpage
 layout login_voice
+layout mainpage
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2424,6 +2434,7 @@ raw help
 raw increase_text_size
 raw login
 string Emergency
+string Porfile
 string SJOG_logoCD
 string SJOG_phone
 string SJOG_phoneCD

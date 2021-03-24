@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Outter Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 2 buttons layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <!-- button QR scan and button voice sign in -->
+            <ImageButton
+                android:id="@+id/QR_sign_in"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/camera_icon"
+                android:scaleType="centerInside"
+                android:background="@drawable/circlebutton_tiny"
+                android:layout_alignParentLeft="true"/>
+
+            <ImageButton
+                android:id="@+id/Voice_Sign_in"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/microphone_icon"
+                android:background="@drawable/circlebutton_tiny"
+                android:scaleType="centerInside"
+                android:layout_alignParentRight="true"/>
+
+
+
+        </RelativeLayout>
+
+
+        <!-- Time text layout -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <!-- actual time textview goes here -->
+            <TextView
+                android:id="@+id/Curren_Time"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <!-- image layout -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <!-- imageview goes here -->
+            <ImageView
+                android:id="@+id/Display_Image"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:src="@drawable/sjog_building"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

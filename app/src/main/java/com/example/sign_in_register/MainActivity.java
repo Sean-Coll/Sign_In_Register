@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //origin code changed for test loged page : Intent locSelect = new Intent(MainActivity.this, LocationSelectionActivity.class);
             case(R.id.Login): {
                 custSoundPool.release();
-                Intent locSelect = new Intent(MainActivity.this, logedpage.class);
+                Intent locSelect = new Intent(MainActivity.this, MainPage.class);
                 locSelect.putExtra("textsize",sizenow);
                 startActivity(locSelect);
                 break;
