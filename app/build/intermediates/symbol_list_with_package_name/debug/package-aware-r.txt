@@ -2429,10 +2429,13 @@ menu bottombar
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
-raw decrease_text_size
+raw change_text_size
+raw emergency
 raw help
-raw increase_text_size
 raw login
+raw profile
+raw settings
+raw timetable
 string Emergency
 string Porfile
 string SJOG_logoCD
