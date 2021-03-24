@@ -29,6 +29,7 @@ import android.os.Bundle;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ import java.util.ArrayList;
 public class SpeechRecognition {
 
     private TextView speechOutput; // TextView where the recognised speech will be displayed
-    private Button speechTrigger; // Button that will trigger the startListening() method
+    private View speechTrigger; // Button that will trigger the startListening() method
     private SpeechRecognizer speechRec; // Main SpeechRecognizer object that does the listening
     private Intent recIntent; // The Intent that supports the recogniser
 
@@ -114,7 +115,7 @@ public class SpeechRecognition {
         this.speechOutput = output;
     }
     // Specify which ImageView to use
-    public void setSpeechTrigger(Button trigger) {
+    public void setSpeechTrigger(View trigger) {
         this.speechTrigger = trigger;
     }
     // Check if the app has permission to record audio and requests it if not

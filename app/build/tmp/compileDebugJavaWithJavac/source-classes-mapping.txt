@@ -2,32 +2,32 @@ com/example/sign_in_register/pager.java
  com.example.sign_in_register.pager
 com/example/sign_in_register/CustomSoundPool.java
  com.example.sign_in_register.CustomSoundPool
-com/example/sign_in_register/SpeechRecognition.java
- com.example.sign_in_register.SpeechRecognition
- com.example.sign_in_register.SpeechRecognition$1
-com/example/sign_in_register/LoginVoiceActivity.java
- com.example.sign_in_register.LoginVoiceActivity
- com.example.sign_in_register.LoginVoiceActivity$1
+com/example/sign_in_register/fragments/settingFragment.java
+ com.example.sign_in_register.fragments.settingFragment
+com/example/sign_in_register/BuildConfig.java
+ com.example.sign_in_register.BuildConfig
+com/example/sign_in_register/fragments/emergencyFragment.java
+ com.example.sign_in_register.fragments.emergencyFragment
+ com.example.sign_in_register.fragments.emergencyFragment$1
 com/example/sign_in_register/HelpActivity.java
  com.example.sign_in_register.HelpActivity
+com/example/sign_in_register/MainActivity.java
+ com.example.sign_in_register.MainActivity
+ com.example.sign_in_register.MainActivity$1
+com/example/sign_in_register/fragments/personFragment.java
+ com.example.sign_in_register.fragments.personFragment
+com/example/sign_in_register/MainPage.java
+ com.example.sign_in_register.MainPage
+ com.example.sign_in_register.MainPage$1
 com/example/sign_in_register/LocationSelectionActivity.java
  com.example.sign_in_register.LocationSelectionActivity
 com/example/sign_in_register/fragments/signinFragment.java
  com.example.sign_in_register.fragments.signinFragment
  com.example.sign_in_register.fragments.signinFragment$1
  com.example.sign_in_register.fragments.signinFragment$2
-com/example/sign_in_register/fragments/personFragment.java
- com.example.sign_in_register.fragments.personFragment
-com/example/sign_in_register/MainActivity.java
- com.example.sign_in_register.MainActivity
- com.example.sign_in_register.MainActivity$1
-com/example/sign_in_register/BuildConfig.java
- com.example.sign_in_register.BuildConfig
-com/example/sign_in_register/fragments/settingFragment.java
- com.example.sign_in_register.fragments.settingFragment
-com/example/sign_in_register/fragments/emergencyFragment.java
- com.example.sign_in_register.fragments.emergencyFragment
- com.example.sign_in_register.fragments.emergencyFragment$1
-com/example/sign_in_register/MainPage.java
- com.example.sign_in_register.MainPage
- com.example.sign_in_register.MainPage$1
+com/example/sign_in_register/SpeechRecognition.java
+ com.example.sign_in_register.SpeechRecognition
+ com.example.sign_in_register.SpeechRecognition$1
+com/example/sign_in_register/LoginVoiceActivity.java
+ com.example.sign_in_register.LoginVoiceActivity
+ com.example.sign_in_register.LoginVoiceActivity$1

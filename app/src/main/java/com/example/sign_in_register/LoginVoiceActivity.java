@@ -13,6 +13,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
 
     SpeechRecognition speechRec; // The speech recognition object from SpeechRecognition.java
     ImageView back;
-    Button micIcon; // The trigger for speech recognition
+    ImageButton micIcon; // The trigger for speech recognition
     TextView speechOutput; // The recognised speech will be displayed here
     TextView tapMessage;
     int textsize;
@@ -35,6 +36,8 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
         back = findViewById(R.id.Back_Arrow);
         speechOutput = findViewById(R.id.Speech_Output);
         tapMessage = findViewById(R.id.Tap_Message_Voice);
+        micIcon = findViewById(R.id.Mic_Icon);
+        micIcon.setOnClickListener(this);
         back.setOnClickListener(this);
 
 
