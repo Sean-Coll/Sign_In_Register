@@ -60,7 +60,7 @@ public class emergencyFragment extends Fragment {
             public void onClick(View v) {
                 //make a call
                 Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_CALL);
+                intent.setAction(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:"+ number));
                 startActivity(intent);
             }

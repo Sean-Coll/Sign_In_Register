@@ -1,4 +1,4 @@
-#Wed Mar 24 19:46:49 GMT 2021
+#Fri Mar 26 11:12:29 GMT 2021
 base.0=/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
