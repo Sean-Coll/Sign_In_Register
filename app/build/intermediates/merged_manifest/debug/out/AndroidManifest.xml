@@ -40,6 +40,8 @@
         </activity>
         <activity android:name="com.example.sign_in_register.LoginVoiceActivity" >
         </activity>
+        <activity android:name="com.example.sign_in_register.AdminPage" >
+        </activity>
     </application>
 
 </manifest>

@@ -1823,6 +1823,7 @@ id SHIFT
 id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
+id SJOG_Logo
 id SYM
 id SaintJohn
 id Speech_Output

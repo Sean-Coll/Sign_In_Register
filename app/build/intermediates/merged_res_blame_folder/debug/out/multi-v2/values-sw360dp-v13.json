@@ -4,7 +4,7 @@
             "outputFile": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/seancoll/.gradle/caches/transforms-2/files-2.1/66b606266a9d3ed5c2b5fb1a465f6ad7/preference-1.1.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
+                    "source": "/Users/seancoll/.gradle/caches/transforms-2/files-2.1/b7f624538b3b9b419a197115fa477125/preference-1.1.1/res/values-sw360dp-v13/values-sw360dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

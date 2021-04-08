@@ -27,6 +27,7 @@
         <activity android:name=".LocationSelectionActivity"> </activity>
         <activity android:name=".HelpActivity"> </activity>
         <activity android:name=".LoginVoiceActivity"> </activity>
+        <activity android:name=".AdminPage"> </activity>
     </application>
 
 </manifest>

@@ -28,7 +28,7 @@
 17-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:11:22-66
 18
 19    <application
-19-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:13:5-30:19
+19-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:13:5-31:19
 20        android:allowBackup="true"
 20-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:14:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -72,6 +72,10 @@
 41-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:29:9-66
 41-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:29:19-53
 42        </activity>
-43    </application>
-44
-45</manifest>
+43        <activity android:name="com.example.sign_in_register.AdminPage" >
+43-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:30:9-57
+43-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:30:19-44
+44        </activity>
+45    </application>
+46
+47</manifest>
