@@ -26,14 +26,14 @@ com/example/sign_in_register/BuildConfig.java
  com.example.sign_in_register.BuildConfig
 com/example/sign_in_register/DBOperations.java
  com.example.sign_in_register.DBOperations
-com/example/sign_in_register/HelpActivity.java
- com.example.sign_in_register.HelpActivity
-com/example/sign_in_register/MainActivity.java
- com.example.sign_in_register.MainActivity
- com.example.sign_in_register.MainActivity$1
 com/example/sign_in_register/fragments/settingFragment.java
  com.example.sign_in_register.fragments.settingFragment
  com.example.sign_in_register.fragments.settingFragment$1
+com/example/sign_in_register/MainActivity.java
+ com.example.sign_in_register.MainActivity
+ com.example.sign_in_register.MainActivity$1
+com/example/sign_in_register/HelpActivity.java
+ com.example.sign_in_register.HelpActivity
 com/example/sign_in_register/AdminPage.java
  com.example.sign_in_register.AdminPage
  com.example.sign_in_register.AdminPage$1

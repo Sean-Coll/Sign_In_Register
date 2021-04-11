@@ -34,16 +34,27 @@
 
     </RelativeLayout>
 
+<!-- Layout for list and textView -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        >
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/No_Entries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="35sp"
+            android:textColor="@color/black">
+        </TextView>
 
         <ListView
             android:id="@+id/List"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+
             />
     </RelativeLayout>
 

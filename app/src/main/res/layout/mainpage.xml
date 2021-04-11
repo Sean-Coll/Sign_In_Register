@@ -28,8 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            app:itemIconTint="@color/bg_tab"
-            app:itemTextColor="@color/bg_tab"
+            app:itemTextColor="@color/black"
             app:menu="@menu/bottombar"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

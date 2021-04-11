@@ -60,18 +60,19 @@
 
         <!-- image layout -->
         <LinearLayout
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
             <!-- imageview goes here -->
             <ImageView
                 android:id="@+id/Display_Image"
-                android:layout_height="wrap_content"
+                android:layout_height="350dp"
                 android:layout_width="match_parent"
-                android:gravity="center"
-                android:src="@drawable/sjog_building"
-                />
+                android:layout_gravity="center"
+                android:background="@drawable/sjog_building"
+                android:contentDescription="@string/SJOG_buildingCD" />
 
         </LinearLayout>
 

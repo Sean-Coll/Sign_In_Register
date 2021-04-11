@@ -48,6 +48,7 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
         viewPager.addOnPageChangeListener(this);
         bottombar = findViewById(R.id.bottombar);
         bottombar.setOnNavigationItemSelectedListener(this);
+        bottombar.setItemIconTintList(null);
 
         //page changes, the reason no braek in each case is the app should not shut down after change to other pages
         viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {

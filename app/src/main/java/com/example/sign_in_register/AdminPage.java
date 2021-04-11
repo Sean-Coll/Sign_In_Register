@@ -1,11 +1,13 @@
 package com.example.sign_in_register;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +26,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     DBOperations getAll;
     CalendarView cal;
     ListView list;
+    TextView noEntries;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         getAll = new DBOperations(this, "getData");
         cal = findViewById(R.id.Calendar);
         list = findViewById(R.id.List);
+        noEntries = findViewById(R.id.No_Entries);
         CalendarView.OnDateChangeListener dateListener = new CalendarView.OnDateChangeListener() {
             // Parameters: The calendar, year, month, day
             @Override
@@ -68,7 +72,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     // Right now it only gets the first name (fname) **REMOVE THIS LATER**
     private void parseData(String json) throws JSONException {
         JSONArray jsonArray = new JSONArray(json);
-
+        Log.i("JSON Length", "Length is " + jsonArray.length());
         String[] fname = new String[jsonArray.length()];
         String[] sname = new String[jsonArray.length()];
         String[] fullName = new String[jsonArray.length()];
@@ -89,8 +93,16 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     }
 
     private void displayData(String[] data) {
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
-        list.setAdapter(adapter);
+        if(data.length == 0) {
+            noEntries.setText(R.string.no_entries);
+            list.setAdapter(null);
+        }
+        else {
+            noEntries.setText("");
+            ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
+            list.setAdapter(adapter);
+        }
+
     }
 
     @Override
@@ -99,4 +111,4 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
             finish();
         }
     }
-}//
+}

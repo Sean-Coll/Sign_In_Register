@@ -144,10 +144,6 @@
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_sjog_building.jpg.flat",
-        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/sjog_building.jpg"
-    },
-    {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
@@ -172,10 +168,6 @@
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_list_layout.xml.flat",
-        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/list_layout.xml"
-    },
-    {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_voicebutton_pressed.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/voicebutton_pressed.xml"
     },
@@ -186,6 +178,10 @@
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/menu_bottombar.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/menu/bottombar.xml"
+    },
+    {
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_sjog_building.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/sjog_building.png"
     },
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_flowers.jpg.flat",

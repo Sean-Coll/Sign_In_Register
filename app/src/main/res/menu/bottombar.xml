@@ -19,7 +19,7 @@
         android:orderInCategory="2"
         android:id="@+id/bottombar_profile"
         android:icon="@drawable/person_icon"
-        android:title="@string/Porfile"
+        android:title="@string/Profile"
         />
 
     <item

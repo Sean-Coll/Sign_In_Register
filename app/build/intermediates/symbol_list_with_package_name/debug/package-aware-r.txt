@@ -1819,6 +1819,7 @@ id Login
 id META
 id Mic_Icon
 id NO_DEBUG
+id No_Entries
 id Phone_No
 id QR_sign_in
 id SHIFT
@@ -1994,7 +1995,6 @@ id fitToContents
 id fixed
 id flip
 id floating
-id fname
 id forever
 id fragment_container_view_tag
 id ghost_view
@@ -2164,7 +2164,6 @@ id slide
 id smallLabel
 id snackbar_action
 id snackbar_text
-id sname
 id snap
 id snapMargins
 id spacer
@@ -2337,7 +2336,6 @@ layout fragment_signin
 layout help_page
 layout homeorcampus
 layout image_frame
-layout list_layout
 layout login_voice
 layout mainpage
 layout material_chip_input_combo
@@ -2443,7 +2441,8 @@ raw profile
 raw settings
 raw timetable
 string Emergency
-string Porfile
+string Profile
+string SJOG_buildingCD
 string SJOG_logoCD
 string SJOG_phone
 string SJOG_phoneCD
@@ -2555,6 +2554,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string no_entries
 string not_set
 string password_toggle_content_description
 string path_password_eye
