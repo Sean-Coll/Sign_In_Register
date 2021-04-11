@@ -16,15 +16,36 @@
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:background="@drawable/back_arrow"
-            android:scaleType="fitStart"/>
+            android:scaleType="fitStart"
+            android:contentDescription="@string/back_arrowCD" />
 
     </RelativeLayout>
 
-    <CalendarView
-        android:id="@+id/Calendar"
+    <!-- Calendar's layout -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <CalendarView
+            android:id="@+id/Calendar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="50dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+
+        <ListView
+            android:id="@+id/List"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+    </RelativeLayout>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

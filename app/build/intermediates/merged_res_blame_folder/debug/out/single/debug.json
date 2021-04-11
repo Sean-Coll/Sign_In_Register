@@ -172,6 +172,10 @@
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_list_layout.xml.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/list_layout.xml"
+    },
+    {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_voicebutton_pressed.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/voicebutton_pressed.xml"
     },

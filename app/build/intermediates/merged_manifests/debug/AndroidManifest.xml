@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -26,7 +27,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Sign_In_Register" >
+        android:theme="@style/Theme.Sign_In_Register"
+        android:usesCleartextTraffic="true" >
         <activity android:name="com.example.sign_in_register.MainPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

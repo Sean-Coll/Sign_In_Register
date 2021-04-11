@@ -1,10 +1,11 @@
 package com.example.sign_in_register;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     ImageButton back;
     DBOperations getAll;
     CalendarView cal;
+    ListView list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,8 +33,8 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
         back = findViewById(R.id.Back_Arrow);
         back.setOnClickListener(this);
         getAll = new DBOperations(this, "getData");
-
         cal = findViewById(R.id.Calendar);
+        list = findViewById(R.id.List);
         CalendarView.OnDateChangeListener dateListener = new CalendarView.OnDateChangeListener() {
             // Parameters: The calendar, year, month, day
             @Override
@@ -51,7 +53,6 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
                 DBOperations getDataForDate = new DBOperations(getApplicationContext(), "getDataForDate");
                 try {
                     String result = getDataForDate.execute(date).get();
-                    Log.i("JSON", result);
                     parseData(result);
 //                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
                 } catch (ExecutionException | InterruptedException | JSONException e) {
@@ -67,22 +68,29 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     // Right now it only gets the first name (fname) **REMOVE THIS LATER**
     private void parseData(String json) throws JSONException {
         JSONArray jsonArray = new JSONArray(json);
-        StringBuilder sb = new StringBuilder();
 
         String[] fname = new String[jsonArray.length()];
         String[] sname = new String[jsonArray.length()];
+        String[] fullName = new String[jsonArray.length()];
 
         for(int i = 0; i < jsonArray.length(); i++) {
 
+            // Create a new StringBuilder each time so it is clear
+            StringBuilder sb = new StringBuilder();
             JSONObject obj = jsonArray.getJSONObject(i);
             fname[i] = obj.getString("fname");
             sname[i] = obj.getString("sname");
             sb.append(fname[i]);
             sb.append(" "); // Add a space
             sb.append(sname[i]);
+            fullName[i] = sb.toString().trim();
         }
-        Log.i("PARSED", sb.toString().trim() + "?");
-        Toast.makeText(this, sb.toString().trim(), Toast.LENGTH_LONG).show();
+        displayData(fullName);
+    }
+
+    private void displayData(String[] data) {
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
+        list.setAdapter(adapter);
     }
 
     @Override
@@ -91,4 +99,4 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
             finish();
         }
     }
-}
+}//
