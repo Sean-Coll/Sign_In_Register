@@ -154,10 +154,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setUpClickListeners(help);
         setUpClickListeners(text_size_change);
     }
-
+//test2
     // Sets up the onClick and onLongClick listeners for the View passed in
     public void setUpClickListeners(View view) {
         view.setOnClickListener(this);
         view.setOnLongClickListener(this);
     }
-}
+}//test 1
