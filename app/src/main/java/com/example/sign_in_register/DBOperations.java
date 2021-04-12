@@ -4,14 +4,13 @@
  * Right now, it will only work with a locally hosted server with the right file and db structure,
  * Author: Seán Coll
  * Created: 8/4/21
- * Last Edited: 9/4/21
+ * Last Edited: 12/4/21
  */
 
 package com.example.sign_in_register;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
@@ -90,7 +89,6 @@ public class DBOperations extends AsyncTask<String,Void,String> {
         else if (this.method.equals("getDataForDate")) {
             try {
                 String date = strings[0];
-                Log.i("INFO", date);
                 DATA_URL = "http://192.168.1.7/Sign_In_Register/getDataForDate.php";
                 // Create URL object
                 URL url = new URL(DATA_URL);
@@ -130,6 +128,52 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 IS.close();
                 // Return the JSON string
                 return sb.toString().trim();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        // This method will sign the user in
+        else if(this.method.equals("signIn")) {
+            try {
+                String fname = strings[0];
+                String sname = strings[1];
+                String date = strings[2];
+                DATA_URL = "http://192.168.1.7/Sign_In_Register/signIn.php";
+                // Create URL object
+                URL url = new URL(DATA_URL);
+                // Create a URL connection
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                // Specify the type of request
+                httpURLConnection.setRequestMethod("POST");
+                // Allow output (Sending data from client)
+                httpURLConnection.setDoOutput(true);
+                // Accept the output through the OutputStream
+                OutputStream OS = httpURLConnection.getOutputStream();
+                // Buffered Writer used to apply parameters (none in this method)
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, StandardCharsets.UTF_8));
+                // Encode the data to be sent
+                String data = URLEncoder.encode("fname","UTF-8")+"="+
+                        URLEncoder.encode(fname, "UTF-8")+"&"+
+                        URLEncoder.encode("sname","UTF-8")+"="+
+                        URLEncoder.encode(sname,"UTF-8")+"&"+
+                        URLEncoder.encode("date","UTF-8")+"="+
+                        URLEncoder.encode(date,"UTF-8");
+                // Write the data to the BufferedWriter
+                bufferedWriter.write(data);
+                // Flush the BufferedWriter
+                bufferedWriter.flush();
+                // Close the BufferedWriter
+                bufferedWriter.close();
+                // Close the OutputStream
+                OS.close();
+                // Create InputStream to receive data from server
+                InputStream IS = httpURLConnection.getInputStream();
+                // Capture the data return from server
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(IS, StandardCharsets.ISO_8859_1));
+                // Close the InputStream
+                IS.close();
+                // Return the JSON string
+                return "Login Successful";
             } catch (IOException e) {
                 e.printStackTrace();
             }

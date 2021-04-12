@@ -2,7 +2,7 @@
  * functionality for this activity comes from SpeechRecognition.java.
  * Author: Seán Coll
  * Created: 12/3/21
- * Last Edited: 12/3/21
+ * Last Edited: 12/4/21
  */
 
 package com.example.sign_in_register;
@@ -11,13 +11,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.ExecutionException;
 
 public class LoginVoiceActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -62,9 +70,13 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
                     tapMessage.setTextSize(textsize);
                 }
             }
-
+            // Every time the text changes, check if its valid
             @Override
             public void afterTextChanged(Editable editable) {
+                // Don't check if the TextView is empty
+                if(speechOutput.getText() != "") {
+                    validate(speechOutput.getText().toString());
+                }
             }
         });
 
@@ -91,6 +103,22 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
                 speechRec.startListening();
                 tapMessage.setText(R.string.say_name);
                 break;
+            }
+        }
+    }
+    // Validate the user's input, if its correct, sign them in
+    public void validate(String result){
+        if(result.toLowerCase().equals("hello")) {
+            // Get today's date in the correct format to insert
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            String date = df.format(new Date());
+            DBOperations signIn = new DBOperations(this, "signIn");
+            try {
+                // The Name needs to come from the profile page
+                String response = signIn.execute("Sean", "Coll", date).get();
+                Toast.makeText(this,response,Toast.LENGTH_LONG).show();
+            } catch (ExecutionException | InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
