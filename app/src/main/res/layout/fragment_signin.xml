@@ -59,7 +59,7 @@
 
 
         <!-- image layout -->
-        <LinearLayout
+        <FrameLayout
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -74,7 +74,14 @@
                 android:background="@drawable/sjog_building"
                 android:contentDescription="@string/SJOG_buildingCD" />
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/Green_Tick"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/green_tick"/>
+
+        </FrameLayout>
 
 
     </LinearLayout>

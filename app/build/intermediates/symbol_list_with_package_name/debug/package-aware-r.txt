@@ -1812,6 +1812,7 @@ id Display_Image
 id Emergency_call
 id Evac_Message
 id FUNCTION
+id Green_Tick
 id Help
 id House
 id List

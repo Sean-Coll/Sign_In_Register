@@ -109,16 +109,21 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
     // Validate the user's input, if its correct, sign them in
     public void validate(String result){
         if(result.toLowerCase().equals("hello")) {
+            String response = "";
             // Get today's date in the correct format to insert
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             String date = df.format(new Date());
             DBOperations signIn = new DBOperations(this, "signIn");
             try {
                 // The Name needs to come from the profile page
-                String response = signIn.execute("Sean", "Coll", date).get();
+                response = signIn.execute("Sean", "Coll", date).get();
                 Toast.makeText(this,response,Toast.LENGTH_LONG).show();
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
+            }
+            if(response.equals("Login Successful")) {
+                setResult(RESULT_OK);
+                finish();
             }
         }
     }
