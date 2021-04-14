@@ -43,39 +43,50 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
             // Parameters: The calendar, year, month, day
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                String month = "" + i1;
-                String day = "" + i2;
+                String month = "" + i1; // Change int to String
+                String day = "" + i2; // Change int to String
 
+                // Change the month to 0x if the month number is less than 10
                 if(i1 < 10) {
-                    month = "0" + (i1 + 1);
+                    month = "0" + (i1 + 1); // Add one to the number since it starts on 0
                 }
+                // Change the month to 0x if the day number is less than 10
                 if(i2 < 10) {
                     day = "0" + i2;
                 }
-                String date = i + "-" + month + "-" + day; // Increase month by 1 since it starts at 0
-//                Toast.makeText(getApplicationContext(), date, Toast.LENGTH_LONG).show();
+                // Concatenate the year, month and day
+                String date = i + "-" + month + "-" + day;
+                // Create object to get data for a specific date
                 DBOperations getDataForDate = new DBOperations(getApplicationContext(), "getDataForDate");
                 try {
+                    // Execute the operation
                     String result = getDataForDate.execute(date).get();
-                    parseData(result);
-//                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+                    // If the server is down
+                    if(result.equals("Server Error")) {
+                        noEntries.setText(""); // Clear the TextView
+                        list.setAdapter(null); // Clear the ListView
+                        noEntries.setText(result);
+                    }
+                    // Otherwise there is data to parse
+                    else {
+                        parseData(result);
+                    }
                 } catch (ExecutionException | InterruptedException | JSONException e) {
                     e.printStackTrace();
                 }
 
             }
         };
+        // Set the listener for the calendar
         cal.setOnDateChangeListener(dateListener);
     }
-
     // Parses a JSON string return from a DB operation
-    // Right now it only gets the first name (fname) **REMOVE THIS LATER**
     private void parseData(String json) throws JSONException {
         JSONArray jsonArray = new JSONArray(json);
         Log.i("JSON Length", "Length is " + jsonArray.length());
-        String[] fname = new String[jsonArray.length()];
-        String[] sname = new String[jsonArray.length()];
-        String[] fullName = new String[jsonArray.length()];
+        String[] fname = new String[jsonArray.length()]; // Array for first names
+        String[] sname = new String[jsonArray.length()]; // Array for sur names
+        String[] fullName = new String[jsonArray.length()]; // Arrray for the full name to display
 
         for(int i = 0; i < jsonArray.length(); i++) {
 
@@ -89,20 +100,22 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
             sb.append(sname[i]);
             fullName[i] = sb.toString().trim();
         }
+        // Display all full names
         displayData(fullName);
     }
 
     private void displayData(String[] data) {
+        // If there are no entries for a day
         if(data.length == 0) {
+            noEntries.setText(""); // Clear the TextView
             noEntries.setText(R.string.no_entries);
-            list.setAdapter(null);
+            list.setAdapter(null); // Clear the ListView
         }
         else {
-            noEntries.setText("");
+            noEntries.setText(""); // Clear the TextView
             ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, data);
-            list.setAdapter(adapter);
+            list.setAdapter(adapter); // Clear the ListView
         }
-
     }
 
     @Override

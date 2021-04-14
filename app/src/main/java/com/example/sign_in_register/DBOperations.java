@@ -4,13 +4,14 @@
  * Right now, it will only work with a locally hosted server with the right file and db structure,
  * Author: Seán Coll
  * Created: 8/4/21
- * Last Edited: 12/4/21
+ * Last Edited: 14/4/21
  */
 
 package com.example.sign_in_register;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
@@ -27,8 +28,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.NetworkInterface;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -47,49 +52,20 @@ public class DBOperations extends AsyncTask<String,Void,String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+        NetworkInterface check;
     }
 
     @Override
     protected String doInBackground(String... strings) {
-        // Initialise url variable
+        // Initialise url variables
+        String ROOT_URL = "http://192.168.1.7/Sign_In_Register/";
         String DATA_URL = "";
         // Check what method is to be run
-        if (this.method.equals("getData")) {
-            try {
-                // Change URL to the PHP script to get all data
-                DATA_URL = "http://192.168.1.7/Sign_In_Register/getData.php";
-                // Create URL object
-                URL url = new URL(DATA_URL);
-                // Create a URL connection
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                // Specify the type of request
-                httpURLConnection.setRequestMethod("GET");
-                // Allow output (Sending data from client)
-                httpURLConnection.setDoOutput(true);
-                // Create InputStream to receive data from server
-                InputStream IS = httpURLConnection.getInputStream();
-                // Capture the data return from server
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(IS, StandardCharsets.ISO_8859_1));
-                // Create StringBuilder to format the data
-                StringBuilder sb = new StringBuilder();
-                String json;
-                // Append each line of data to a single string which will form the JSON string
-                while ((json = bufferedReader.readLine()) != null) {
-                    sb.append(json).append("\n");
-                }
-                // Close the InputStream
-                IS.close();
-                // Return the JSON string
-                return sb.toString().trim();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
         // This method will get all first names and surnames for the date specified
-        else if (this.method.equals("getDataForDate")) {
+        if (this.method.equals("getDataForDate")) {
             try {
                 String date = strings[0];
-                DATA_URL = "http://192.168.1.7/Sign_In_Register/getDataForDate.php";
+                DATA_URL = ROOT_URL + "getDataForDate.php";
                 // Create URL object
                 URL url = new URL(DATA_URL);
                 // Create a URL connection
@@ -130,6 +106,7 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 return sb.toString().trim();
             } catch (IOException e) {
                 e.printStackTrace();
+                return "Server Error";
             }
         }
         // This method will sign the user in
@@ -138,7 +115,7 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 String fname = strings[0];
                 String sname = strings[1];
                 String date = strings[2];
-                DATA_URL = "http://192.168.1.7/Sign_In_Register/signIn.php";
+                DATA_URL = ROOT_URL + "signIn.php";
                 // Create URL object
                 URL url = new URL(DATA_URL);
                 // Create a URL connection
@@ -176,10 +153,11 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 return "Login Successful";
             } catch (IOException e) {
                 e.printStackTrace();
+                return "Server Error";
             }
         }
-        // Something went wrong along the way usually an error it the PHP script.
-        return "ERROR. The server is down or there is a PHP error.";
+        // Something went wrong along the way the server is probably down.
+        return "ERROR. The server is down.";
     }
 
     @Override

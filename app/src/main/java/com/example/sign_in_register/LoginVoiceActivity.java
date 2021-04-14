@@ -2,7 +2,7 @@
  * functionality for this activity comes from SpeechRecognition.java.
  * Author: Seán Coll
  * Created: 12/3/21
- * Last Edited: 12/4/21
+ * Last Edited: 14/4/21
  */
 
 package com.example.sign_in_register;
@@ -121,9 +121,15 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }
+            // If the user signs in successfully
             if(response.equals("Login Successful")) {
                 setResult(RESULT_OK);
                 finish();
+            }
+            // If the server is down
+            else if(response.equals("Server Error")) {
+                tapMessage.setText("");
+                tapMessage.setText(response);
             }
         }
     }
