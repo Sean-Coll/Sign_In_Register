@@ -68,6 +68,10 @@
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/microphone_icon.png"
     },
     {
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_upload_button.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/upload_button.png"
+    },
+    {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_fragment_person.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/fragment_person.xml"
     },
@@ -266,5 +270,9 @@
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_circlebutton_tiny_unpressed.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/circlebutton_tiny_unpressed.xml"
+    },
+    {
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_sign_in.mp3.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/raw/sign_in.mp3"
     }
 ]

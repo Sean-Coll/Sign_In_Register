@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.sign_in_register.R;
@@ -23,6 +24,7 @@ public class emergencyFragment extends Fragment {
     TextView title,phone_num;
     int textsize;
     String textstyle;
+    ImageView uploadButton;
 
     public emergencyFragment() {
         // Required empty public constructor
@@ -51,11 +53,9 @@ public class emergencyFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        call = (ImageButton)getActivity().findViewById(R.id.Emergency_call);
-
         //get the number
         String number = phone_num.getText().toString();
-        call.setOnClickListener(new View.OnClickListener() {
+        phone_num.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //make a call
@@ -65,6 +65,13 @@ public class emergencyFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        uploadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     // cat our object, for now we set textsize as 30 but in future we get this data from server
@@ -72,11 +79,9 @@ public class emergencyFragment extends Fragment {
     {
         title = (TextView)view.findViewById(R.id.Titile);
         phone_num = (TextView)view.findViewById(R.id.Phone_No);
+        uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         textsize = 30;
 //        textstyle = "Time";
-
-        title.setText("call some one");
-        phone_num.setText("125-485621482");
 
         title.setTextSize(textsize);
         phone_num.setTextSize(textsize);

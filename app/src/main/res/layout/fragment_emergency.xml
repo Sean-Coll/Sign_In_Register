@@ -17,21 +17,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView" />
+            android:text="@string/tap_to_call"
+            android:layout_marginTop="50dp"
+            android:textSize="30sp"/>
 
         <TextView
             android:id="@+id/Phone_No"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView" />
+            android:text="@string/phone_number"
+            android:textSize="30sp"/>
 
 
-        <!-- this layout is for set blank above buttons -->
-        <LinearLayout android:layout_height="match_parent"
+        <!-- this layout is for the emergency image -->
+        <LinearLayout android:layout_height="0dp"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/Emergency_Image"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/green_tick"/>
 
         </LinearLayout>
 
@@ -40,16 +52,15 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/Emergency_call"
+            <ImageView
+                android:id="@+id/Upload_Button"
                 android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="@drawable/voicebutton"
-                android:src="@drawable/microphone_icon"
+                android:layout_height="100dp"
+                android:src="@drawable/upload_button"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
+                android:layout_marginBottom="50dp"
                 />
-
         </RelativeLayout>
 
     </LinearLayout>

@@ -1796,6 +1796,7 @@ drawable test_custom_background
 drawable timetable_icon
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upload_button
 drawable voicebutton
 drawable voicebutton_pressed
 drawable voicebutton_unpressed
@@ -1809,7 +1810,7 @@ id CTRL
 id Calendar
 id Curren_Time
 id Display_Image
-id Emergency_call
+id Emergency_Image
 id Evac_Message
 id FUNCTION
 id Green_Tick
@@ -1836,6 +1837,7 @@ id TOP_START
 id Tap_Message_Voice
 id Textsize
 id Titile
+id Upload_Button
 id Voice_Sign_in
 id accelerate
 id accessibility_action_clickable_span
@@ -2440,6 +2442,7 @@ raw help
 raw login
 raw profile
 raw settings
+raw sign_in
 raw timetable
 string Emergency
 string Profile
@@ -2563,6 +2566,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string person
+string phone_number
 string preference_copied
 string reply_title
 string say_name
