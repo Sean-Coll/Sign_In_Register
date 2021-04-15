@@ -13,42 +13,72 @@
         android:id="@+id/imageView"
         android:layout_width="342dp"
         android:layout_height="392dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="170dp"
         android:src="@drawable/timetable"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="169dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="124dp"
         android:layout_height="114dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginBottom="573dp"
         android:src="@drawable/person_icon"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="236dp"
         android:layout_height="59dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="584dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="88dp"
         android:src="@drawable/upload_button"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="587dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="642dp"
         android:text="Name:"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="57dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="593dp"
         android:text="Age:"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="106dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
