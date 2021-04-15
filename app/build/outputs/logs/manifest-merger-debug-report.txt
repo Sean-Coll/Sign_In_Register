@@ -1,14 +1,15 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [com.google.android.material:material:1.3.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/723282c7994550298e26d567cb0e519b/material-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.preference:preference:1.1.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/b7f624538b3b9b419a197115fa477125/preference-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/563542d576f9860371ac8313c9751418/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/0cb9ff486f5edb59977e253831b932c8/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/647215dad2189bf7ccc8bedb88622434/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3e2f5beb4d58d3401e065b053aa3706a/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/26c27a93496e808418c6ce0af4a5e09c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/5dbc57b58024a8f25b5db3778841ef05/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/47185ad723d232e6208c03e6fdcb34a4/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -23,6 +24,8 @@ MERGED from [androidx.media:media:1.0.0] /Users/seancoll/.gradle/caches/transfor
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/7dc97d5beadbae66ede9b95e497a48ab/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3c5e939b0e6b29bdf460a7fe7fc8149e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.2.4] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/d498e635f8fdaa9d89d6b2227472c73b/fragment-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/2b6f759f1865acbf944a3f6d219c22b1/jetified-gifdecoder-4.11.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/4c17e154ef07b292d59cbd69b46aafdc/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/8eb429c297537d6ea02c3f7824ce56bd/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/84abe344207c34d4a56c6167bf93e6d4/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/033c795406e41888727686d5fd780672/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -45,20 +48,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/seancoll/.gradl
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/55aabb19ce510e0f34e274c3a1923b82/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/a6ca4f9f3ef5bd7ddcaac8d3ff2baf6c/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/adf8d4ec58c98f5b37616cb4b06b74f4/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:3:5-43
 		INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-36:12
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:2:11-69
@@ -88,12 +91,20 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:13:5-80
 	android:name
 		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:13:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:14:22-78
 application
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:15:5-34:19
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:16:5-35:19
 MERGED from [com.google.android.material:material:1.3.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/723282c7994550298e26d567cb0e519b/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/723282c7994550298e26d567cb0e519b/material-1.3.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/563542d576f9860371ac8313c9751418/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/563542d576f9860371ac8313c9751418/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3e2f5beb4d58d3401e065b053aa3706a/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3e2f5beb4d58d3401e065b053aa3706a/jetified-glide-4.11.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/2b6f759f1865acbf944a3f6d219c22b1/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/2b6f759f1865acbf944a3f6d219c22b1/jetified-gifdecoder-4.11.0/AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.3.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/b234a824af7fd98a5c54fc0522824a91/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/b234a824af7fd98a5c54fc0522824a91/core-1.3.1/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/90ecde5404179819368e2359ab771b50/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -101,49 +112,49 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sean
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/b234a824af7fd98a5c54fc0522824a91/core-1.3.1/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:19:9-41
 	android:roundIcon
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:19:9-54
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:17:9-44
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:18:9-44
 	android:allowBackup
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:21:9-54
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:22:9-54
 	android:usesCleartextTraffic
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:22:9-44
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:23:9-44
 activity#com.example.sign_in_register.MainPage
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:24:9-29:20
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:25:9-30:20
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:24:19-43
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:25:19-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:25:13-28:29
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:26:13-29:29
 action#android.intent.action.MAIN
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:26:17-69
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:26:25-66
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:28:27-74
 activity#com.example.sign_in_register.LocationSelectionActivity
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:30:9-73
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:31:9-73
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:30:19-60
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:31:19-60
 activity#com.example.sign_in_register.HelpActivity
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:31:9-60
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:32:9-60
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:31:19-47
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:32:19-47
 activity#com.example.sign_in_register.LoginVoiceActivity
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:32:9-66
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:33:9-66
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:32:19-53
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:33:19-53
 activity#com.example.sign_in_register.AdminPage
-ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:33:9-57
+ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:34:9-57
 	android:name
-		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:33:19-44
+		ADDED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:34:19-44
 uses-sdk
 INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml
@@ -158,6 +169,8 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/seancoll/.gradle/caches/
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/0cb9ff486f5edb59977e253831b932c8/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/647215dad2189bf7ccc8bedb88622434/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/647215dad2189bf7ccc8bedb88622434/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3e2f5beb4d58d3401e065b053aa3706a/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3e2f5beb4d58d3401e065b053aa3706a/jetified-glide-4.11.0/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/26c27a93496e808418c6ce0af4a5e09c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/26c27a93496e808418c6ce0af4a5e09c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/5dbc57b58024a8f25b5db3778841ef05/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
@@ -186,6 +199,10 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/seancoll/.g
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/3c5e939b0e6b29bdf460a7fe7fc8149e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.2.4] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/d498e635f8fdaa9d89d6b2227472c73b/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.4] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/d498e635f8fdaa9d89d6b2227472c73b/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/2b6f759f1865acbf944a3f6d219c22b1/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/2b6f759f1865acbf944a3f6d219c22b1/jetified-gifdecoder-4.11.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/4c17e154ef07b292d59cbd69b46aafdc/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/4c17e154ef07b292d59cbd69b46aafdc/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/8eb429c297537d6ea02c3f7824ce56bd/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/8eb429c297537d6ea02c3f7824ce56bd/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/seancoll/.gradle/caches/transforms-2/files-2.1/84abe344207c34d4a56c6167bf93e6d4/viewpager-1.0.0/AndroidManifest.xml:20:5-44

@@ -108,6 +108,10 @@
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/emergency_icon.png"
     },
     {
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_timetable.jpg.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/timetable.jpg"
+    },
+    {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_camera_icon.png.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/camera_icon.png"
     },
@@ -234,6 +238,10 @@
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_speaker_icon.png.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/speaker_icon.png"
+    },
+    {
+        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_white.png.flat",
+        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/white.png"
     },
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_emergency.mp3.flat",

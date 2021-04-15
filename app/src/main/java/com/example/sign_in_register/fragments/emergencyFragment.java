@@ -5,6 +5,9 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -12,6 +15,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.Environment;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +27,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sign_in_register.ImageLoader;
 import com.example.sign_in_register.R;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class emergencyFragment extends Fragment {
 
@@ -52,6 +65,7 @@ public class emergencyFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_emergency, container, false);
+        emergencyImage = (ImageView)view.findViewById(R.id.Emergency_Image);
         init();
 
 
@@ -79,7 +93,14 @@ public class emergencyFragment extends Fragment {
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Check if permission has been granted
+                // Check if permission to write to storage has been granted
+                if(getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
+                        PackageManager.PERMISSION_DENIED) {
+                    // If permission not granted, request it
+                    String[] permission = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                    getActivity().requestPermissions(permission, PERMISSION_CODE);
+                }
+                // Check if permission to read storage has been granted
                 if(getActivity().checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) ==
                         PackageManager.PERMISSION_DENIED) {
                     // If permission not granted, request it
@@ -92,6 +113,7 @@ public class emergencyFragment extends Fragment {
                 }
             }
         });
+        loadImage();
     }
 
     // cat our object, for now we set textsize as 30 but in future we get this data from server
@@ -100,7 +122,6 @@ public class emergencyFragment extends Fragment {
         title = (TextView)view.findViewById(R.id.Titile);
         phone_num = (TextView)view.findViewById(R.id.Phone_No);
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
-        emergencyImage = (ImageView)view.findViewById(R.id.Emergency_Image);
         textsize = 30;
 //        textstyle = "Time";
 
@@ -137,6 +158,65 @@ public class emergencyFragment extends Fragment {
         getActivity();
         if(resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK) {
             emergencyImage.setImageURI(data.getData());
+            // Save the image
+            saveImage();
         }
+    }
+
+    public void saveImage() {
+        // Convert image to drawable
+        BitmapDrawable drawable = (BitmapDrawable)emergencyImage.getDrawable();
+        // Convert drawable to bitmap
+        Bitmap bitmap = drawable.getBitmap();
+        // Get directory for SD card
+        File sdCardDirectory = Environment.getExternalStorageDirectory();
+        // Create file to store image
+        File image = new File(sdCardDirectory, "emergencyImage.png");
+        // Boolean to react to result
+        boolean success = false;
+        // Encode image as PNG
+        FileOutputStream outputStream;
+        try {
+            outputStream = new FileOutputStream(image);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
+            outputStream.flush();
+            outputStream.close();
+            success = true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if(!success) {
+            Toast.makeText(getActivity(), "There was a problem saving.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void loadImage() {
+        // Get the correct screen density for displaying
+//        DisplayMetrics dMetrics = getResources().getDisplayMetrics();
+//        File sdCardDirectory = Environment.getExternalStorageDirectory();
+//        File image = new File(sdCardDirectory, "emergencyImage.png");
+//        Bitmap bitmap = BitmapFactory.decodeFile(image.getAbsolutePath());
+
+//        ImageLoader loader = new ImageLoader(emergencyImage.getWidth(), emergencyImage.getHeight());
+//        emergencyImage.setImageResource(R.drawable.white);
+        int width = emergencyImage.getLayoutParams().width;
+        int height = emergencyImage.getLayoutParams().height;
+        Log.i("WIDTH", "" + width);
+        Log.i("HEIGHT", "" + height);
+        ImageLoader loader = new ImageLoader(width, height);
+        Bitmap bitmap = null;
+        try {
+            bitmap = loader.execute().get();
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        emergencyImage.setImageBitmap(bitmap);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadImage();
     }
 }
