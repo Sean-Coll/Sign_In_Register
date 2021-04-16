@@ -59,6 +59,7 @@ public class DBOperations extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... strings) {
         // Initialise url variables
         String ROOT_URL = "http://192.168.1.7/Sign_In_Register/";
+//        String ROOT_URL = "http://192.168.1.7/Attendance/";
         String DATA_URL = "";
         // Check what method is to be run
         // This method will get all first names and surnames for the date specified
@@ -115,6 +116,8 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 String fname = strings[0];
                 String sname = strings[1];
                 String date = strings[2];
+//                String name = strings[0];
+//                String date = strings[1];
                 DATA_URL = ROOT_URL + "signIn.php";
                 // Create URL object
                 URL url = new URL(DATA_URL);
@@ -131,10 +134,14 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 // Encode the data to be sent
                 String data = URLEncoder.encode("fname","UTF-8")+"="+
                         URLEncoder.encode(fname, "UTF-8")+"&"+
-                        URLEncoder.encode("sname","UTF-8")+"="+
-                        URLEncoder.encode(sname,"UTF-8")+"&"+
+                        URLEncoder.encode("sname", "UTF-8")+"="+
+                        URLEncoder.encode(sname, "UTF-8")+"&"+
                         URLEncoder.encode("date","UTF-8")+"="+
                         URLEncoder.encode(date,"UTF-8");
+//                String data = URLEncoder.encode("name","UTF-8")+"="+
+//                        URLEncoder.encode(name, "UTF-8")+"&"+
+//                        URLEncoder.encode("date","UTF-8")+"="+
+//                        URLEncoder.encode(date,"UTF-8");
                 // Write the data to the BufferedWriter
                 bufferedWriter.write(data);
                 // Flush the BufferedWriter

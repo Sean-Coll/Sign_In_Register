@@ -110,6 +110,9 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
     public void validate(String result){
         if(result.toLowerCase().equals("hello")) {
             String response = "";
+//            Intent intent = getIntent();
+//            String username = intent.getStringExtra("uname");
+//            Log.i("USERNAME", username);
             // Get today's date in the correct format to insert
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             String date = df.format(new Date());
@@ -117,6 +120,7 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
             try {
                 // The Name needs to come from the profile page
                 response = signIn.execute("Sean", "Coll", date).get();
+//                response = signIn.execute(username, date).get();
                 Toast.makeText(this,response,Toast.LENGTH_LONG).show();
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();

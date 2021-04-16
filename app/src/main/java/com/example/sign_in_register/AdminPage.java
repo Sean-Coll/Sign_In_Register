@@ -83,10 +83,11 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     // Parses a JSON string return from a DB operation
     private void parseData(String json) throws JSONException {
         JSONArray jsonArray = new JSONArray(json);
-        Log.i("JSON Length", "Length is " + jsonArray.length());
+//        Log.i("JSON Length", "Length is " + jsonArray.length());
         String[] fname = new String[jsonArray.length()]; // Array for first names
         String[] sname = new String[jsonArray.length()]; // Array for sur names
         String[] fullName = new String[jsonArray.length()]; // Arrray for the full name to display
+//        String[] name = new String[jsonArray.length()]; // Array for names
 
         for(int i = 0; i < jsonArray.length(); i++) {
 
@@ -99,6 +100,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
             sb.append(" "); // Add a space
             sb.append(sname[i]);
             fullName[i] = sb.toString().trim();
+//            name[i] = obj.getString("name");
         }
         // Display all full names
         displayData(fullName);

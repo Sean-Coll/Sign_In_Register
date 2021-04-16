@@ -29,6 +29,11 @@ public class personFragment extends Fragment {
     ImageView timetableImage, uploadButton, profilePicture;
     ImageHandler imageHandler, profilePicHandler;
 
+    public String getUsername() {
+        return username;
+    }
+
+    public String username;
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
     public static final int PROFILE_PICTURE_PICK = 3000;
@@ -163,5 +168,6 @@ public class personFragment extends Fragment {
         super.onResume();
         imageHandler.loadImage();
         profilePicHandler.loadImage();
+        username = name.getText().toString();
     }
 }

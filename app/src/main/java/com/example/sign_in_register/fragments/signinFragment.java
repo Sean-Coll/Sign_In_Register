@@ -7,6 +7,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +84,10 @@ public class signinFragment extends Fragment {
         Voice_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                personFragment pf = new personFragment();
                 Intent pagechange = new Intent(getActivity(), LoginVoiceActivity.class);
+                Log.i("USERNAME", pf.getUsername());
+                pagechange.putExtra("uname", pf.username);
                 startActivityForResult(pagechange, 1);
             }
         });
