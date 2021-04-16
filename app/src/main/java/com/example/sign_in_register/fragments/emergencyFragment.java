@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sign_in_register.ImageHandler;
 import com.example.sign_in_register.ImageLoader;
 import com.example.sign_in_register.R;
 
@@ -38,13 +39,13 @@ import java.util.concurrent.ExecutionException;
 
 public class emergencyFragment extends Fragment {
 
-    ImageButton call;
     View view;
     TextView title,phone_num;
     int textsize;
     String textstyle;
     ImageView uploadButton;
     ImageView emergencyImage;
+    ImageHandler imageHandler;
 
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
@@ -113,7 +114,7 @@ public class emergencyFragment extends Fragment {
                 }
             }
         });
-        loadImage();
+        imageHandler.loadImage();
     }
 
     // cat our object, for now we set textsize as 30 but in future we get this data from server
@@ -127,6 +128,8 @@ public class emergencyFragment extends Fragment {
 
         title.setTextSize(textsize);
         phone_num.setTextSize(textsize);
+
+        imageHandler = new ImageHandler(emergencyImage, "emergencyImage.jpg");
     }
 
     public void pickImageFromGallery() {
@@ -159,64 +162,15 @@ public class emergencyFragment extends Fragment {
         if(resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK) {
             emergencyImage.setImageURI(data.getData());
             // Save the image
-            saveImage();
+            if(!imageHandler.saveImage()) {
+                Toast.makeText(getActivity(), "There was a problem saving.", Toast.LENGTH_LONG).show();
+            }
         }
-    }
-
-    public void saveImage() {
-        // Convert image to drawable
-        BitmapDrawable drawable = (BitmapDrawable)emergencyImage.getDrawable();
-        // Convert drawable to bitmap
-        Bitmap bitmap = drawable.getBitmap();
-        // Get directory for SD card
-        File sdCardDirectory = Environment.getExternalStorageDirectory();
-        // Create file to store image
-        File image = new File(sdCardDirectory, "emergencyImage.png");
-        // Boolean to react to result
-        boolean success = false;
-        // Encode image as PNG
-        FileOutputStream outputStream;
-        try {
-            outputStream = new FileOutputStream(image);
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-            outputStream.flush();
-            outputStream.close();
-            success = true;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        if(!success) {
-            Toast.makeText(getActivity(), "There was a problem saving.", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    public void loadImage() {
-        // Get the correct screen density for displaying
-//        DisplayMetrics dMetrics = getResources().getDisplayMetrics();
-//        File sdCardDirectory = Environment.getExternalStorageDirectory();
-//        File image = new File(sdCardDirectory, "emergencyImage.png");
-//        Bitmap bitmap = BitmapFactory.decodeFile(image.getAbsolutePath());
-
-//        ImageLoader loader = new ImageLoader(emergencyImage.getWidth(), emergencyImage.getHeight());
-//        emergencyImage.setImageResource(R.drawable.white);
-        int width = emergencyImage.getLayoutParams().width;
-        int height = emergencyImage.getLayoutParams().height;
-        Log.i("WIDTH", "" + width);
-        Log.i("HEIGHT", "" + height);
-        ImageLoader loader = new ImageLoader(width, height);
-        Bitmap bitmap = null;
-        try {
-            bitmap = loader.execute().get();
-        } catch (ExecutionException | InterruptedException e) {
-            e.printStackTrace();
-        }
-        emergencyImage.setImageBitmap(bitmap);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        loadImage();
+        imageHandler.loadImage();
     }
 }

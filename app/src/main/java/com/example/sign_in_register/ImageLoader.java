@@ -24,8 +24,7 @@ public class ImageLoader extends AsyncTask<File, Void, Bitmap> {
 
     @Override
     protected Bitmap doInBackground(File... files) {
-        File sdCardDirectory = Environment.getExternalStorageDirectory();
-        File image = new File(sdCardDirectory, "emergencyImage.png");
+        File image = files[0];
         if(this.imageW > 0 && this.imageH > 0) {
             try {
                 BitmapFactory.Options o = new BitmapFactory.Options();
