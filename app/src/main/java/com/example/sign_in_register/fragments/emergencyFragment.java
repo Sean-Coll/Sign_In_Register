@@ -43,8 +43,7 @@ public class emergencyFragment extends Fragment {
     TextView title,phone_num;
     int textsize;
     String textstyle;
-    ImageView uploadButton;
-    ImageView emergencyImage;
+    ImageView uploadButton, emergencyImage;
     ImageHandler imageHandler;
 
     public static final int PERMISSION_CODE = 1000;
@@ -53,8 +52,6 @@ public class emergencyFragment extends Fragment {
     public emergencyFragment() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,7 +63,6 @@ public class emergencyFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_emergency, container, false);
-        emergencyImage = (ImageView)view.findViewById(R.id.Emergency_Image);
         init();
 
 
@@ -123,6 +119,7 @@ public class emergencyFragment extends Fragment {
         title = (TextView)view.findViewById(R.id.Titile);
         phone_num = (TextView)view.findViewById(R.id.Phone_No);
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
+        emergencyImage = (ImageView)view.findViewById(R.id.Emergency_Image);
         textsize = 30;
 //        textstyle = "Time";
 

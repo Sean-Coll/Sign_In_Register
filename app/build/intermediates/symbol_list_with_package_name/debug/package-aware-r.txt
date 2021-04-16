@@ -1827,6 +1827,7 @@ id NO_DEBUG
 id Name
 id No_Entries
 id Phone_No
+id Profile_Picture
 id QR_sign_in
 id SHIFT
 id SHOW_ALL
@@ -1840,6 +1841,7 @@ id TOP_END
 id TOP_START
 id Tap_Message_Voice
 id Textsize
+id Timetable_Image
 id Titile
 id Upload_Button
 id Voice_Sign_in
@@ -2025,9 +2027,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
-id imageView2
-id imageView3
 id info
 id invisible
 id inward
