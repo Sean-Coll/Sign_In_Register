@@ -31,7 +31,7 @@
                 android:id="@+id/Voice_Sign_in"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:src="@drawable/microphone_icon"
+                android:src="@drawable/login1"
                 android:background="@drawable/circlebutton_tiny"
                 android:scaleType="centerInside"
                 android:layout_alignParentRight="true"/>

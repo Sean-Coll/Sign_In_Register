@@ -27,6 +27,7 @@ com/example/sign_in_register/fragments/signinFragment.java
 com/example/sign_in_register/fragments/personFragment.java
  com.example.sign_in_register.fragments.personFragment
  com.example.sign_in_register.fragments.personFragment$1
+ com.example.sign_in_register.fragments.personFragment$2
 com/example/sign_in_register/MainPage.java
  com.example.sign_in_register.MainPage
  com.example.sign_in_register.MainPage$1

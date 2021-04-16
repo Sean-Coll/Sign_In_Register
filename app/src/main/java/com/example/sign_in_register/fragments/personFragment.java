@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -25,11 +26,12 @@ public class personFragment extends Fragment {
 
     View view;
     TextView name, age;
-    ImageView timetableImage, uploadButton;
-    ImageHandler imageHandler;
+    ImageView timetableImage, uploadButton, profilePicture;
+    ImageHandler imageHandler, profilePicHandler;
 
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
+    public static final int PROFILE_PICTURE_PICK = 3000;
 
     public personFragment() {
         // Required empty public constructor
@@ -74,7 +76,31 @@ public class personFragment extends Fragment {
                 }
                 else {
                     // If permission granted
-                    pickImageFromGallery();
+                    pickImageFromGallery(IMAGE_PICK);
+                }
+            }
+        });
+
+        profilePicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Check if permission to write to storage has been granted
+                if(getActivity().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) ==
+                        PackageManager.PERMISSION_DENIED) {
+                    // If permission not granted, request it
+                    String[] permission = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                    getActivity().requestPermissions(permission, PERMISSION_CODE);
+                }
+                // Check if permission to read storage has been granted
+                if(getActivity().checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) ==
+                        PackageManager.PERMISSION_DENIED) {
+                    // If permission not granted, request it
+                    String[] permission = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                    getActivity().requestPermissions(permission, PERMISSION_CODE);
+                }
+                else {
+                    // If permission granted
+                    pickImageFromGallery(PROFILE_PICTURE_PICK);
                 }
             }
         });
@@ -87,15 +113,17 @@ public class personFragment extends Fragment {
         age = (TextView)view.findViewById(R.id.Age);
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         timetableImage = (ImageView)view.findViewById(R.id.Timetable_Image);
+        profilePicture = (ImageView)view.findViewById(R.id.Profile_Picture);
 
         imageHandler = new ImageHandler(timetableImage, "timetableImage.jpg");
+        profilePicHandler = new ImageHandler(profilePicture, "profilePicture.jpg");
     }
 
-    public void pickImageFromGallery() {
+    public void pickImageFromGallery(int id) {
         // Intent to pick image
         Intent getImage = new Intent(Intent.ACTION_PICK);
         getImage.setType("image/*");
-        startActivityForResult(getImage,IMAGE_PICK);
+        startActivityForResult(getImage,id);
     }
 
     // Handle permission during run time
@@ -105,11 +133,7 @@ public class personFragment extends Fragment {
         // If permission is being requested
         if(requestCode == PERMISSION_CODE) {
             // If permission has been granted
-            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                pickImageFromGallery();
-            }
-            // If permission denied
-            else {
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_DENIED) {
                 Toast.makeText(getActivity(), "Permission required", Toast.LENGTH_LONG).show();
             }
         }
@@ -125,11 +149,19 @@ public class personFragment extends Fragment {
                 Toast.makeText(getActivity(), "There was a problem saving.", Toast.LENGTH_LONG).show();
             }
         }
+        else if(resultCode == Activity.RESULT_OK && requestCode == PROFILE_PICTURE_PICK) {
+            profilePicture.setImageURI(data.getData());
+            // Save the image
+            if(!profilePicHandler.saveImage()) {
+                Toast.makeText(getActivity(), "There was a problem saving.", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
         imageHandler.loadImage();
+        profilePicHandler.loadImage();
     }
 }
