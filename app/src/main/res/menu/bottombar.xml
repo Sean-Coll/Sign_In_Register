@@ -5,27 +5,27 @@
         android:orderInCategory="0"
         android:id="@+id/bottombar_timtable"
         android:icon="@drawable/timetable_icon"
-        android:title="@string/Timetable"
+        android:title="@string/sign_in"
         />
 
     <item
         android:orderInCategory="1"
         android:id="@+id/bottombar_emergency"
         android:icon="@drawable/emergency_icon"
-        android:title="@string/Emergency"
+        android:title="@string/emergency"
         />
 
     <item
         android:orderInCategory="2"
         android:id="@+id/bottombar_profile"
         android:icon="@drawable/person_icon"
-        android:title="@string/Profile"
+        android:title="@string/profile"
         />
 
     <item
         android:orderInCategory="3"
         android:id="@+id/bottombar_setting"
         android:icon="@drawable/setting_icon"
-        android:title="@string/Setting"
+        android:title="@string/settings"
         />
 </menu>

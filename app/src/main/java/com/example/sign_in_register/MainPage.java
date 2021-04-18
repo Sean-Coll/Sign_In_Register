@@ -26,10 +26,10 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
     BottomNavigationView bottombar;
     CustomSoundPool custSoundPool;
 
-    int timetableSound, emergencySound, profileSound, settingsSound; // Sound identifiers
+    int signInSound, emergencySound, profileSound, settingsSound; // Sound identifiers
 
     // create control object
-    signinFragment timetable = new signinFragment();
+    signinFragment signIn = new signinFragment();
     emergencyFragment emergency = new emergencyFragment();
     personFragment person = new personFragment();
     settingFragment setting = new settingFragment();
@@ -59,11 +59,11 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
         setUpSoundPool();
 
         // Set up views to long click and play descriptions
-        View ttableV = findViewById(R.id.bottombar_timtable);
+        View signInV = findViewById(R.id.bottombar_timtable);
         View emergencyV = findViewById(R.id.bottombar_emergency);
         View profileV = findViewById(R.id.bottombar_profile);
         View settingsV = findViewById(R.id.bottombar_setting);
-        ttableV.setOnLongClickListener(this);
+        signInV.setOnLongClickListener(this);
         emergencyV.setOnLongClickListener(this);
         profileV.setOnLongClickListener(this);
         settingsV.setOnLongClickListener(this);
@@ -75,7 +75,7 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
             public Fragment getItem(int position) {
                 switch (position){
                     case 0:
-                        return timetable;
+                        return signIn;
                     case 1:
                         return emergency;
                     case 2:
@@ -124,7 +124,7 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
         custSoundPool.setCon(this);
         custSoundPool.initialise();
 
-        timetableSound = custSoundPool.load(R.raw.timetable);
+        signInSound = custSoundPool.load(R.raw.sign_in);
         emergencySound = custSoundPool.load(R.raw.emergency);
         profileSound = custSoundPool.load(R.raw.profile);
         settingsSound = custSoundPool.load(R.raw.settings);
@@ -134,7 +134,7 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
     public boolean onLongClick(View view) {
         switch(view.getId()) {
             case(R.id.bottombar_timtable): {
-                custSoundPool.play(timetableSound);
+                custSoundPool.play(signInSound);
                 break;
             }
             case(R.id.bottombar_emergency): {

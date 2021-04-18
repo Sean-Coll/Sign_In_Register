@@ -16,7 +16,6 @@
     <string name="loginCD">Login symbol. Tap to login</string>
     <string name="evac_message">Evacuation planning data</string>
     <string name="no_entries">No entries for today.</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -32,11 +31,17 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="Emergency">Emergency</string>
-    <string name="Timetable">Timetable</string>
-    <string name="person">Person</string>
-    <string name="Setting">Setting</string>
-    <string name="Profile">Profile</string>
+    <string name="sign_in">Sign in</string>
+    <string name="emergency">Emergency</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
     <string name="SJOG_buildingCD">Saint John of God Liffey Services Building</string>
     <string name="phone_number">125-485621482</string>
+    <string name="upload_buttonCD">Press to insert your own picture</string>
+    <string name="profile_pictureCD">Your profile picture</string>
+    <string name="voice_sign_inCD">Tap to start sign in with voice</string>
+    <string name="QR_code_sign_inCD">Tap to start sign in with camera</string>
+    <string name="green_tickCD">Green tick. You are signed in.</string>
+    <string name="mic_buttonCD">Tap, then say hello to sign in.</string>
+    <string name="day_centreCD">Your day centre.</string>
 </resources>

@@ -22,16 +22,30 @@
         android:theme="@style/Theme.Sign_In_Register"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".MainPage">
+        <activity
+            android:name=".MainPage"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LocationSelectionActivity"> </activity>
-        <activity android:name=".HelpActivity"> </activity>
-        <activity android:name=".LoginVoiceActivity"> </activity>
-        <activity android:name=".AdminPage"> </activity>
+        <activity
+            android:name=".LocationSelectionActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".LoginVoiceActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".AdminPage"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

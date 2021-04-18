@@ -50,9 +50,10 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
 
 
         Intent reciever = getIntent();
-        textsize = reciever.getIntExtra("textsize",12);
+        textsize = reciever.getIntExtra("textsize",30);
 
         tapMessage.setTextSize(textsize);
+        speechOutput.setTextSize(textsize);
 
         speechOutput.addTextChangedListener(new TextWatcher() {
             @Override

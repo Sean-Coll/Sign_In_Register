@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,15 +8,15 @@
         <!-- back arrow's layout -->
         <RelativeLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            >
+            android:layout_width="match_parent">
 
             <ImageButton
                 android:id="@+id/Back_Arrow"
                 android:layout_width="100dp"
                 android:layout_height="60dp"
                 android:background="@drawable/back_arrow"
-                android:scaleType="fitStart"/>
+                android:scaleType="fitStart"
+                android:contentDescription="@string/back_arrowCD" />
 
         </RelativeLayout>
 
@@ -29,8 +27,6 @@
             android:layout_width="match_parent"
             android:orientation="vertical">
 
-
-
                 <ImageButton
                     android:id="@+id/Mic_Icon"
                     android:layout_width="200dp"
@@ -39,7 +35,7 @@
                     android:src="@drawable/microphone_icon"
                     android:layout_centerInParent="true"
                     android:scaleType="centerInside"
-                    />
+                    android:contentDescription="@string/mic_buttonCD" />
 
         </RelativeLayout>
 
@@ -56,14 +52,14 @@
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:text="Tap me"
-                />
+                android:layout_marginTop="20dp"/>
 
             <TextView
                 android:id="@+id/Speech_Output"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
                 android:gravity="center"/>
-
 
         </LinearLayout>
 

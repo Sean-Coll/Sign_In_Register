@@ -11,7 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/Titile"
             android:layout_width="match_parent"
@@ -19,7 +18,8 @@
             android:gravity="center"
             android:text="@string/tap_to_call"
             android:layout_marginTop="50dp"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/Phone_No"
@@ -27,7 +27,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/phone_number"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
 
 
         <!-- this layout is for the emergency image -->
@@ -58,7 +60,8 @@
                 android:src="@drawable/upload_button"
                 android:layout_centerInParent="true"
                 android:scaleType="centerInside"
-                android:layout_marginBottom="50dp" />
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/upload_buttonCD" />
         </RelativeLayout>
 
     </LinearLayout>

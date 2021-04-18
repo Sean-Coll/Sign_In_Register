@@ -25,7 +25,8 @@
                 android:src="@drawable/camera_icon"
                 android:scaleType="centerInside"
                 android:background="@drawable/circlebutton_tiny"
-                android:layout_alignParentLeft="true"/>
+                android:layout_alignParentStart="true"
+                android:contentDescription="@string/QR_code_sign_inCD"/>
 
             <ImageButton
                 android:id="@+id/Voice_Sign_in"
@@ -34,9 +35,8 @@
                 android:src="@drawable/login1"
                 android:background="@drawable/circlebutton_tiny"
                 android:scaleType="centerInside"
-                android:layout_alignParentRight="true"/>
-
-
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/voice_sign_inCD"/>
 
         </RelativeLayout>
 
@@ -49,10 +49,11 @@
 
             <!-- actual time textview goes here -->
             <TextView
-                android:id="@+id/Curren_Time"
+                android:id="@+id/Current_Time"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:gravity="center"
+                android:textColor="@color/black"
                 />
 
         </LinearLayout>
@@ -60,28 +61,45 @@
 
         <!-- image layout -->
         <FrameLayout
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp">
 
             <!-- imageview goes here -->
             <ImageView
-                android:id="@+id/Display_Image"
+                android:id="@+id/Day_Centre_Image"
+                android:layout_width="320dp"
                 android:layout_height="350dp"
-                android:layout_width="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/sjog_building"
-                android:contentDescription="@string/SJOG_buildingCD" />
+                android:contentDescription="@string/day_centreCD" />
 
             <ImageView
                 android:id="@+id/Green_Tick"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
-                android:src="@drawable/green_tick"/>
+                android:src="@drawable/green_tick"
+                android:contentDescription="@string/green_tickCD"/>
 
         </FrameLayout>
+
+        <!-- Layout for upload button -->
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/Upload_Button"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/upload_button"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/upload_buttonCD" />
+        </RelativeLayout>
 
 
     </LinearLayout>
