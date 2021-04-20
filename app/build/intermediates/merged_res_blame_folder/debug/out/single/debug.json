@@ -12,12 +12,12 @@
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\layout\\mainpage.xml"
     },
     {
-        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_arrow.png.flat",
         "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\drawable\\back_arrow.png"
+    },
+    {
+        "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\dadfile\\Sign_In_Register\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "E:\\dadfile\\Sign_In_Register\\app\\build\\intermediates\\res\\merged\\debug\\layout_help_page.xml.flat",

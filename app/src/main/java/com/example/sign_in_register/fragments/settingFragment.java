@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -136,7 +137,7 @@ public class settingFragment extends Fragment {
         itemAdapter=new ItemAdapter(view.getContext(),R.layout.settingitem,list);
         listView.setAdapter(itemAdapter);
         seekbar  = (SeekBar)fontsizeview.findViewById(R.id.textchange);
-
+        LinearLayout background = (LinearLayout)view.findViewById(R.id.background);
 
         //dialog init
         dialog = new Dialog(view.getContext());
@@ -151,6 +152,8 @@ public class settingFragment extends Fragment {
         fontstyle = userTheme.getInt("FontStyle",0);
         theme = userTheme.getString("ColorString","#FFFFFFFF");
         seekbar.setProgress(origin_size);
+        background.setBackgroundColor(Color.parseColor(theme));
+
 
         //create item object without extraparameter, if you want with some other feature, use extra Parameter
         Item FontSize = new Item("FontSetting","Customize font size");
@@ -181,13 +184,10 @@ public class settingFragment extends Fragment {
                                 reset.setTextSize(seekbar.getProgress());
                                 apply.setTextSize(seekbar.getProgress());
                                 cur_size = seekbar.getProgress();
-                                seekbar.setProgress(cur_size);
                             }
 
                             @Override
                             public void onStartTrackingTouch(SeekBar seekBar) {
-                                cur_size=origin_size;
-                                seekbar.setProgress(cur_size);
                             }
 
                             @Override

@@ -3,6 +3,7 @@ package com.example.sign_in_register;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,10 +46,12 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         item_text.setTypeface(null, cur_fontstyle);
         item_text.setText(item.getContentText());
         item_text.setTextSize(cur_size);
+        item_text.setBackgroundColor(Color.parseColor(cur_theme));
 
         item_des.setTypeface(null, cur_fontstyle);
         item_des.setText(item.getextraParameter());
         item_des.setTextSize(cur_size);
+        item_des.setBackgroundColor(Color.parseColor(cur_theme));
         return view;
     }
 
