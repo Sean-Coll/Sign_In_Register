@@ -31,20 +31,30 @@
         android:testOnly="true"
         android:theme="@style/Theme.Sign_In_Register"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.sign_in_register.MainPage" >
+        <activity
+            android:name="com.example.sign_in_register.MainPage"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.sign_in_register.LocationSelectionActivity" >
+        <activity
+            android:name="com.example.sign_in_register.LocationSelectionActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.example.sign_in_register.HelpActivity" >
+        <activity
+            android:name="com.example.sign_in_register.HelpActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.example.sign_in_register.LoginVoiceActivity" >
+        <activity
+            android:name="com.example.sign_in_register.LoginVoiceActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.example.sign_in_register.AdminPage" >
+        <activity
+            android:name="com.example.sign_in_register.AdminPage"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

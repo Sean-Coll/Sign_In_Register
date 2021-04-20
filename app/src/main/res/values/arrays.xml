@@ -9,4 +9,19 @@
         <item>reply</item>
         <item>reply_all</item>
     </string-array>
+
+    <string-array name = "fontstyle">
+        <item>Normal</item>
+        <item>Bold</item>
+        <item>Italic</item>
+        <item>Bold_Italic</item>
+    </string-array>
+
+    <string-array name = "theme">
+        <item>white</item>
+        <item>red</item>
+        <item>teal</item>
+        <item>purple</item>
+    </string-array>
+
 </resources>

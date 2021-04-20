@@ -26,6 +26,18 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
     BottomNavigationView bottombar;
     CustomSoundPool custSoundPool;
 
+    //  transfering data between fragments
+    private String mTitle;
+    public String getmTitle()
+    {
+        return mTitle;
+    }
+    public void setmTitle(String title)
+    {
+        this.mTitle = title;
+    }
+
+
     int signInSound, emergencySound, profileSound, settingsSound; // Sound identifiers
 
     // create control object

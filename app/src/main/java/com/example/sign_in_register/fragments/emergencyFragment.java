@@ -121,7 +121,6 @@ public class emergencyFragment extends Fragment {
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         emergencyImage = (ImageView)view.findViewById(R.id.Emergency_Image);
         textsize = 30;
-//        textstyle = "Time";
 
         title.setTextSize(textsize);
         phone_num.setTextSize(textsize);
