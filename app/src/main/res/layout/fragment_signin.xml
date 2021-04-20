@@ -7,6 +7,7 @@
 
     <!-- Outter Layout -->
     <LinearLayout
+        android:id="@+id/Emergency"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -87,6 +88,7 @@
 
         <!-- Layout for upload button -->
         <RelativeLayout
+            android:id="@+id/upload_area"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical">

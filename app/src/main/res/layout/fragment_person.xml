@@ -10,6 +10,7 @@
 
     <!-- Outer layout -->
     <LinearLayout
+        android:id="@+id/Emergency"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
@@ -36,8 +37,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="50dp"
-                android:text="Name:"
-                android:textSize="20sp" />
+                android:text="Name:"/>
+
+            <EditText
+                android:id="@+id/Name_Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/Name"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="40dp"
+                android:minWidth="100dp"/>
 
             <TextView
                 android:id="@+id/Age"
@@ -47,18 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
-                android:text="Age:"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/Name_Edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/Name"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="40dp"
-                android:minWidth="100dp"
-                android:textSize="20sp"/>
+                android:text="Age:"/>
 
             <EditText
                 android:id="@+id/Age_Edit"
@@ -66,10 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@id/Age"
                 android:layout_below="@id/Name_Edit"
-
                 android:layout_marginStart="3dp"
-                android:minWidth="50dp"
-                android:textSize="20sp"/>
+                android:minWidth="50dp"/>
         </RelativeLayout>
 
         <!-- Layout for user's image -->

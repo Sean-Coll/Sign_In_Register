@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -134,8 +137,20 @@ public class signinFragment extends Fragment {
         Voice_log = (ImageButton)view.findViewById(R.id.Voice_Sign_in);
         uploadButton = view.findViewById(R.id.Upload_Button);
         dayCentreImage = view.findViewById(R.id.Day_Centre_Image);
-
         greenTick = getActivity().findViewById(R.id.Green_Tick);
+        LinearLayout background = (LinearLayout)view.findViewById(R.id.Emergency);
+        RelativeLayout upload_area = (RelativeLayout)view.findViewById(R.id.upload_area);
+
+        SharedPreferences userTheme = getActivity().getSharedPreferences("Theme", Activity.MODE_PRIVATE);
+        int cur_size = userTheme.getInt("FontSize", 12);
+        int cur_fontstyle = userTheme.getInt("FontStyle",0);
+        String cur_theme = userTheme.getString("ColorString","#FFFFFFFF");
+
+        background.setBackgroundColor(Color.parseColor(cur_theme));
+        upload_area.setBackgroundColor(Color.parseColor(cur_theme));
+
+        CurTime.setTextSize(cur_size);
+        CurTime.setTypeface(null, cur_fontstyle);
 
         imageHandler = new ImageHandler(dayCentreImage, "dayCentre.jpg");
     }

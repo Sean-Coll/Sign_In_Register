@@ -4,9 +4,11 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +26,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +48,7 @@ public class emergencyFragment extends Fragment {
     String textstyle;
     ImageView uploadButton, emergencyImage;
     ImageHandler imageHandler;
+
 
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
@@ -120,10 +124,23 @@ public class emergencyFragment extends Fragment {
         phone_num = (TextView)view.findViewById(R.id.Phone_No);
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         emergencyImage = (ImageView)view.findViewById(R.id.Emergency_Image);
-        textsize = 30;
+        LinearLayout background = (LinearLayout)view.findViewById(R.id.Emergency);
 
-        title.setTextSize(textsize);
-        phone_num.setTextSize(textsize);
+
+        SharedPreferences userTheme = getActivity().getSharedPreferences("Theme", Activity.MODE_PRIVATE);
+        int cur_size = userTheme.getInt("FontSize", 12);
+        int cur_fontstyle = userTheme.getInt("FontStyle",0);
+        String cur_theme = userTheme.getString("ColorString","#FFFFFFFF");
+
+        background.setBackgroundColor(Color.parseColor(cur_theme));
+
+        title.setTextSize(cur_size);
+        title.setTypeface(null, cur_fontstyle);
+
+        phone_num.setTextSize(cur_size);
+        phone_num.setTypeface(null, cur_fontstyle);
+
+
 
         imageHandler = new ImageHandler(emergencyImage, "emergencyImage.jpg");
     }

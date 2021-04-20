@@ -3,7 +3,9 @@ package com.example.sign_in_register.fragments;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,7 +17,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -116,9 +120,34 @@ public class personFragment extends Fragment {
     {
         name = (TextView)view.findViewById(R.id.Name);
         age = (TextView)view.findViewById(R.id.Age);
+
+        EditText nameEdit = (EditText)view.findViewById(R.id.Name_Edit);
+        EditText ageEdit = (EditText)view.findViewById(R.id.Age_Edit);
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         timetableImage = (ImageView)view.findViewById(R.id.Timetable_Image);
         profilePicture = (ImageView)view.findViewById(R.id.Profile_Picture);
+        LinearLayout background = (LinearLayout)view.findViewById(R.id.Emergency);
+
+        SharedPreferences userTheme = getActivity().getSharedPreferences("Theme", Activity.MODE_PRIVATE);
+        int cur_size = userTheme.getInt("FontSize", 12);
+        int cur_fontstyle = userTheme.getInt("FontStyle",0);
+        String cur_theme = userTheme.getString("ColorString","#FFFFFFFF");
+
+        background.setBackgroundColor(Color.parseColor(cur_theme));
+        name.setTextSize(cur_size);
+        name.setTypeface(null, cur_fontstyle);
+
+        age.setTextSize(cur_size);
+        age.setTypeface(null, cur_fontstyle);
+
+        nameEdit.setTextSize(cur_size);
+        nameEdit.setTypeface(null, cur_fontstyle);
+       // nameEdit.setBackgroundColor(Color.parseColor("#FFFFFFFF"));   use to change the background of edittext
+
+        ageEdit.setTextSize(cur_size);
+        ageEdit.setTypeface(null, cur_fontstyle);
+        // ageEdit.setBackgroundColor(Color.parseColor("#FFFFFFFF"));   use to change the background of edittext
+
 
         imageHandler = new ImageHandler(timetableImage, "timetableImage.jpg");
         profilePicHandler = new ImageHandler(profilePicture, "profilePicture.jpg");

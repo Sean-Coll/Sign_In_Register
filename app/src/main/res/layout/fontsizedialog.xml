@@ -21,8 +21,8 @@
         style="@android:style/Widget.SeekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="28"
-        android:min="1" />
+        android:max="45"
+        android:min="7" />
 
     <LinearLayout
         android:layout_width="match_parent"

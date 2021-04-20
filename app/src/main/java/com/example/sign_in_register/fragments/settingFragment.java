@@ -1,8 +1,9 @@
 package com.example.sign_in_register.fragments;
 
+import android.app.Activity;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -13,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -25,9 +25,7 @@ import com.example.sign_in_register.AdminPage;
 import com.example.sign_in_register.Item;
 import com.example.sign_in_register.ItemAdapter;
 import com.example.sign_in_register.R;
-import com.example.sign_in_register.stylefile;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,11 +35,11 @@ public class settingFragment extends Fragment {
     ImageView logo;
     private Button reset, apply;
     private Spinner Theme,Fontstyle;
-    int numTaps,changing_size,origin_size,cur_fontstyle,fontstyle; // The number of times the user has tapped the logo. currently font size
+    int numTaps,cur_size,origin_size,cur_fontstyle,fontstyle; // The number of times the user has tapped the logo. currently font size
     View view;
     TextView displaytext;
     String theme,cur_theme;
-    stylefile user;
+    SharedPreferences userTheme;
 
     // create and set spinner array
     final int[] Fontstylearray = {0,1,2,3};
@@ -67,8 +65,6 @@ public class settingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        //  read stylefile object from database, use object user to accept    !!!!
 
 
         // Inflate the layout for this fragment, dialog layout
@@ -139,6 +135,8 @@ public class settingFragment extends Fragment {
         listView=(ListView)view.findViewById(R.id.Featrue_list);
         itemAdapter=new ItemAdapter(view.getContext(),R.layout.settingitem,list);
         listView.setAdapter(itemAdapter);
+        seekbar  = (SeekBar)fontsizeview.findViewById(R.id.textchange);
+
 
         //dialog init
         dialog = new Dialog(view.getContext());
@@ -147,7 +145,12 @@ public class settingFragment extends Fragment {
         // variable name
         // fontstyle and theme as string
         // origin_size as int      !!!!
-
+        userTheme = getActivity().getSharedPreferences("Theme", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = userTheme.edit();
+        origin_size = userTheme.getInt("FontSize",12);
+        fontstyle = userTheme.getInt("FontStyle",0);
+        theme = userTheme.getString("ColorString","#FFFFFFFF");
+        seekbar.setProgress(origin_size);
 
         //create item object without extraparameter, if you want with some other feature, use extra Parameter
         Item FontSize = new Item("FontSetting","Customize font size");
@@ -171,23 +174,20 @@ public class settingFragment extends Fragment {
                         displaytext = (TextView)fontsizeview.findViewById(R.id.displaytext);
                         apply = (Button)fontsizeview.findViewById(R.id.Apply);
                         reset = (Button)fontsizeview.findViewById(R.id.Reset);
-                        seekbar  = (SeekBar)fontsizeview.findViewById(R.id.textchange);
-                        seekbar.setProgress(changing_size);
-
                         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                             @Override
                             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                                 displaytext.setText("Currently font size: "+ seekBar.getProgress());
                                 reset.setTextSize(seekbar.getProgress());
                                 apply.setTextSize(seekbar.getProgress());
-                                changing_size = seekbar.getProgress();
-                                seekbar.setProgress(changing_size);
+                                cur_size = seekbar.getProgress();
+                                seekbar.setProgress(cur_size);
                             }
 
                             @Override
                             public void onStartTrackingTouch(SeekBar seekBar) {
-                                // add method to do everything you want when you start moving seekbar
-                                // no need for use so leave as nothing right now
+                                cur_size=origin_size;
+                                seekbar.setProgress(cur_size);
                             }
 
                             @Override
@@ -199,12 +199,14 @@ public class settingFragment extends Fragment {
                         apply.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                displaytext.setText("Set size " + seekbar.getProgress() +" as origin size");
-                                origin_size = seekbar.getProgress();
+                                displaytext.setText("Set size " + cur_size +" as origin size");
+                                origin_size = cur_size;
 
-                                stylefile sty = new stylefile(origin_size,fontstyle,cur_theme);
-
-                                //do not forget to upload sty to user database here.    !!!!
+                                //put data into sharedprefrence
+                                editor.putInt("FontSize",origin_size);
+                                editor.putInt("FontStyle",fontstyle);
+                                editor.putString("ColorString",theme);
+                                editor.commit();
                             }
                         });
 
@@ -223,18 +225,22 @@ public class settingFragment extends Fragment {
                     }
 
                     case 1:{
+
                         displaytext = (TextView)themedialog.findViewById(R.id.displaytext);
                         apply = (Button)themedialog.findViewById(R.id.Apply);
                         reset = (Button)themedialog.findViewById(R.id.Pre_view);
                         apply.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                displaytext.setText("Change applied");
                                 fontstyle = cur_fontstyle;
                                 theme = cur_theme;
-                                stylefile sty = new stylefile(origin_size,fontstyle,cur_theme);
 
-                                //do not forget to upload to user database here.    !!!!
-
+                                //put data into sharedprefrence
+                                editor.putInt("FontSize",origin_size);
+                                editor.putInt("FontStyle",fontstyle);
+                                editor.putString("ColorString",theme);
+                                editor.commit();
                             }
                         });
 

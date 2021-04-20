@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,17 +27,6 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
     BottomNavigationView bottombar;
     CustomSoundPool custSoundPool;
 
-    //  transfering data between fragments
-    private String mTitle;
-    public String getmTitle()
-    {
-        return mTitle;
-    }
-    public void setmTitle(String title)
-    {
-        this.mTitle = title;
-    }
-
 
     int signInSound, emergencySound, profileSound, settingsSound; // Sound identifiers
 
@@ -49,6 +39,8 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences user = getSharedPreferences("Theme", MODE_PRIVATE);
+
 
         setContentView(R.layout.mainpage);
 
@@ -85,6 +77,7 @@ public class MainPage extends AppCompatActivity implements BottomNavigationView.
             @NonNull
             @Override
             public Fragment getItem(int position) {
+
                 switch (position){
                     case 0:
                         return signIn;

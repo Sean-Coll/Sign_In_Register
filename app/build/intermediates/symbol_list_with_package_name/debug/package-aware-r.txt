@@ -1818,6 +1818,7 @@ id CTRL
 id Calendar
 id Current_Time
 id Day_Centre_Image
+id Emergency
 id Emergency_Image
 id Evac_Message
 id FUNCTION
@@ -2266,6 +2267,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upload_area
 id useLogo
 id viewPager
 id view_offset_helper
