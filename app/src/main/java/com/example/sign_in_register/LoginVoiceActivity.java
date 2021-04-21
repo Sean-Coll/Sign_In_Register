@@ -7,7 +7,9 @@
 
 package com.example.sign_in_register;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -114,14 +116,17 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
 //            Intent intent = getIntent();
 //            String username = intent.getStringExtra("uname");
 //            Log.i("USERNAME", username);
+            // Get username from profile page
+            SharedPreferences profile = getSharedPreferences("Profile", Activity.MODE_PRIVATE);
+            String username = profile.getString("Name", "");
             // Get today's date in the correct format to insert
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             String date = df.format(new Date());
             DBOperations signIn = new DBOperations(this, "signIn");
             try {
                 // The Name needs to come from the profile page
-                response = signIn.execute("Sean", "Coll", date).get();
-//                response = signIn.execute(username, date).get();
+//                response = signIn.execute("Sean", "Coll", date).get();
+                response = signIn.execute(username, date).get();
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }

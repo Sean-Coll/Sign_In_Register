@@ -30,6 +30,10 @@
             android:id="@+id/Featrue_list"
             android:background="@drawable/settinglistview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:divider="@color/black"
+            android:dividerHeight="1dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
     </LinearLayout>
 </FrameLayout>

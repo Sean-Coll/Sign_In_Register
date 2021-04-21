@@ -8,6 +8,7 @@
         android:id="@+id/displaytext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="Sawp to change font size" />
 
     <LinearLayout
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:background="@color/red"
+            android:background="@color/green"
             android:text="Apply"
             android:textStyle="bold" />
 
@@ -49,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:background="@color/blue"
+            android:background="@color/babyblue"
             android:text="Reset"
             android:textStyle="bold" />
 

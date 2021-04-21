@@ -1,14 +1,12 @@
 package com.example.sign_in_register;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -83,27 +81,15 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
     // Parses a JSON string return from a DB operation
     private void parseData(String json) throws JSONException {
         JSONArray jsonArray = new JSONArray(json);
-//        Log.i("JSON Length", "Length is " + jsonArray.length());
-        String[] fname = new String[jsonArray.length()]; // Array for first names
-        String[] sname = new String[jsonArray.length()]; // Array for sur names
-        String[] fullName = new String[jsonArray.length()]; // Arrray for the full name to display
-//        String[] name = new String[jsonArray.length()]; // Array for names
+        String[] name = new String[jsonArray.length()]; // Array for names
 
         for(int i = 0; i < jsonArray.length(); i++) {
-
             // Create a new StringBuilder each time so it is clear
-            StringBuilder sb = new StringBuilder();
             JSONObject obj = jsonArray.getJSONObject(i);
-            fname[i] = obj.getString("fname");
-            sname[i] = obj.getString("sname");
-            sb.append(fname[i]);
-            sb.append(" "); // Add a space
-            sb.append(sname[i]);
-            fullName[i] = sb.toString().trim();
-//            name[i] = obj.getString("name");
+            name[i] = obj.getString("name");
         }
         // Display all full names
-        displayData(fullName);
+        displayData(name);
     }
 
     private void displayData(String[] data) {

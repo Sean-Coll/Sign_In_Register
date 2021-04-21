@@ -44,7 +44,7 @@ public class settingFragment extends Fragment {
 
     // create and set spinner array
     final int[] Fontstylearray = {0,1,2,3};
-    final String[] Themearray = {"#FFFFFFFF","#FF0000","#FF018786","#FF6200EE"};
+    final String[] Themearray = {"#FFFFFFFF","#FFff6161","#FF03DAC5","#FFBB86FC"};
 
     //create List view and save as item object
     private List<Item> list = new ArrayList<Item>();
@@ -156,8 +156,8 @@ public class settingFragment extends Fragment {
 
 
         //create item object without extraparameter, if you want with some other feature, use extra Parameter
-        Item FontSize = new Item("FontSetting","Customize font size");
-        Item Theme = new Item("Theme","Customize font style and Backgroundcolor");
+        Item FontSize = new Item("Font Setting","Change font size");
+        Item Theme = new Item("Theme","Change font style and background colour");
 
         if(list.size() < 2)
         {

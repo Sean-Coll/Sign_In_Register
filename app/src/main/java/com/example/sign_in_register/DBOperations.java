@@ -11,15 +11,6 @@ package com.example.sign_in_register;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -28,12 +19,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.ConnectException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.NetworkInterface;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -58,8 +45,7 @@ public class DBOperations extends AsyncTask<String,Void,String> {
     @Override
     protected String doInBackground(String... strings) {
         // Initialise url variables
-        String ROOT_URL = "http://192.168.1.7/Sign_In_Register/";
-//        String ROOT_URL = "http://192.168.1.7/Attendance/";
+        String ROOT_URL = "http://192.168.1.7/Attendance/";
         String DATA_URL = "";
         // Check what method is to be run
         // This method will get all first names and surnames for the date specified
@@ -113,11 +99,8 @@ public class DBOperations extends AsyncTask<String,Void,String> {
         // This method will sign the user in
         else if(this.method.equals("signIn")) {
             try {
-                String fname = strings[0];
-                String sname = strings[1];
-                String date = strings[2];
-//                String name = strings[0];
-//                String date = strings[1];
+                String name = strings[0];
+                String date = strings[1];
                 DATA_URL = ROOT_URL + "signIn.php";
                 // Create URL object
                 URL url = new URL(DATA_URL);
@@ -132,16 +115,10 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 // Buffered Writer used to apply parameters (none in this method)
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, StandardCharsets.UTF_8));
                 // Encode the data to be sent
-                String data = URLEncoder.encode("fname","UTF-8")+"="+
-                        URLEncoder.encode(fname, "UTF-8")+"&"+
-                        URLEncoder.encode("sname", "UTF-8")+"="+
-                        URLEncoder.encode(sname, "UTF-8")+"&"+
+                String data = URLEncoder.encode("name","UTF-8")+"="+
+                        URLEncoder.encode(name, "UTF-8")+"&"+
                         URLEncoder.encode("date","UTF-8")+"="+
                         URLEncoder.encode(date,"UTF-8");
-//                String data = URLEncoder.encode("name","UTF-8")+"="+
-//                        URLEncoder.encode(name, "UTF-8")+"&"+
-//                        URLEncoder.encode("date","UTF-8")+"="+
-//                        URLEncoder.encode(date,"UTF-8");
                 // Write the data to the BufferedWriter
                 bufferedWriter.write(data);
                 // Flush the BufferedWriter
