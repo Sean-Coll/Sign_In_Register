@@ -9,14 +9,17 @@ com/example/sign_in_register/ImageLoader.java
  com.example.sign_in_register.ImageLoader
 com/example/sign_in_register/ImageHandler.java
  com.example.sign_in_register.ImageHandler
-com/example/sign_in_register/Item.java
- com.example.sign_in_register.Item
+com/example/sign_in_register/LoginVoiceActivity.java
+ com.example.sign_in_register.LoginVoiceActivity
+ com.example.sign_in_register.LoginVoiceActivity$1
 com/example/sign_in_register/ItemAdapter.java
  com.example.sign_in_register.ItemAdapter
 com/example/sign_in_register/fragments/emergencyFragment.java
  com.example.sign_in_register.fragments.emergencyFragment
  com.example.sign_in_register.fragments.emergencyFragment$1
  com.example.sign_in_register.fragments.emergencyFragment$2
+ com.example.sign_in_register.fragments.emergencyFragment$3
+ com.example.sign_in_register.fragments.emergencyFragment$4
 com/example/sign_in_register/LocationSelectionActivity.java
  com.example.sign_in_register.LocationSelectionActivity
 com/example/sign_in_register/fragments/signinFragment.java
@@ -26,24 +29,33 @@ com/example/sign_in_register/fragments/signinFragment.java
  com.example.sign_in_register.fragments.signinFragment$3
  com.example.sign_in_register.fragments.signinFragment$4
  com.example.sign_in_register.fragments.signinFragment$5
+ com.example.sign_in_register.fragments.signinFragment$6
+ com.example.sign_in_register.fragments.signinFragment$7
 com/example/sign_in_register/fragments/personFragment.java
  com.example.sign_in_register.fragments.personFragment
  com.example.sign_in_register.fragments.personFragment$1
  com.example.sign_in_register.fragments.personFragment$2
  com.example.sign_in_register.fragments.personFragment$3
  com.example.sign_in_register.fragments.personFragment$4
+ com.example.sign_in_register.fragments.personFragment$5
+ com.example.sign_in_register.fragments.personFragment$6
+com/example/sign_in_register/AdminPage.java
+ com.example.sign_in_register.AdminPage
+ com.example.sign_in_register.AdminPage$1
+com/example/sign_in_register/BuildConfig.java
+ com.example.sign_in_register.BuildConfig
+com/example/sign_in_register/DBOperations.java
+ com.example.sign_in_register.DBOperations
+com/example/sign_in_register/HelpActivity.java
+ com.example.sign_in_register.HelpActivity
+com/example/sign_in_register/Item.java
+ com.example.sign_in_register.Item
 com/example/sign_in_register/MainActivity.java
  com.example.sign_in_register.MainActivity
  com.example.sign_in_register.MainActivity$1
-com/example/sign_in_register/BuildConfig.java
- com.example.sign_in_register.BuildConfig
-com/example/sign_in_register/HelpActivity.java
- com.example.sign_in_register.HelpActivity
 com/example/sign_in_register/MainPage.java
  com.example.sign_in_register.MainPage
  com.example.sign_in_register.MainPage$1
-com/example/sign_in_register/DBOperations.java
- com.example.sign_in_register.DBOperations
 com/example/sign_in_register/fragments/settingFragment.java
  com.example.sign_in_register.fragments.settingFragment
  com.example.sign_in_register.fragments.settingFragment$1
@@ -55,9 +67,4 @@ com/example/sign_in_register/fragments/settingFragment.java
  com.example.sign_in_register.fragments.settingFragment$4$3
  com.example.sign_in_register.fragments.settingFragment$4$4
  com.example.sign_in_register.fragments.settingFragment$4$5
-com/example/sign_in_register/LoginVoiceActivity.java
- com.example.sign_in_register.LoginVoiceActivity
- com.example.sign_in_register.LoginVoiceActivity$1
-com/example/sign_in_register/AdminPage.java
- com.example.sign_in_register.AdminPage
- com.example.sign_in_register.AdminPage$1
+ com.example.sign_in_register.fragments.settingFragment$5

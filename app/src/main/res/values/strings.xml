@@ -11,7 +11,7 @@
     <string name="mic_iconCD">Microphone icon. Tap then say you\'re name</string>
     <string name="tap_message_voice">Tap me</string>
     <string name="tap_mic_arrowCD">Arrow icon. Tap the microphone below.</string>
-    <string name="say_name">Say your name</string>
+    <string name="say_hello">Say hello</string>
     <string name="tap_to_dial">Tap to dial</string>
     <string name="loginCD">Login symbol. Tap to login</string>
     <string name="evac_message">Evacuation planning data</string>

@@ -29,14 +29,15 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
-public class LoginVoiceActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginVoiceActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
     SpeechRecognition speechRec; // The speech recognition object from SpeechRecognition.java
     ImageView back;
     ImageButton micIcon; // The trigger for speech recognition
     TextView speechOutput; // The recognised speech will be displayed here
     TextView tapMessage;
-    int textsize;
+    CustomSoundPool custSoundPool;
+    int textsize, mic_button_sound, back_arrow_sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +49,11 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
         tapMessage = findViewById(R.id.Tap_Message_Voice);
         micIcon = findViewById(R.id.Mic_Icon);
         micIcon.setOnClickListener(this);
+        micIcon.setOnLongClickListener(this);
         back.setOnClickListener(this);
+        back.setOnLongClickListener(this);
 
+        setUpSoundPool();
 
         Intent reciever = getIntent();
         textsize = reciever.getIntExtra("textsize",30);
@@ -65,7 +69,7 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(tapMessage.getText().toString().equals(" ")) {
-                    tapMessage.setText(R.string.say_name);
+                    tapMessage.setText(R.string.say_hello);
 
                 }
                 else {
@@ -94,28 +98,41 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
 
-        switch(view.getId()) {
-            case(R.id.Back_Arrow): {
+        switch (view.getId()) {
+            case (R.id.Back_Arrow): {
                 finish();
                 break;
             }
 
-            case(R.id.Mic_Icon): {
+            case (R.id.Mic_Icon): {
                 // Begin speech recognition
                 speechOutput.setText(" "); // Clear the TextView
                 speechRec.startListening();
-                tapMessage.setText(R.string.say_name);
+                tapMessage.setText(R.string.say_hello);
                 break;
             }
         }
     }
+
+    @Override
+    public boolean onLongClick(View view) {
+        switch(view.getId()) {
+            case(R.id.Back_Arrow): {
+                custSoundPool.play(back_arrow_sound);
+                break;
+            }
+            case(R.id.Mic_Icon): {
+                custSoundPool.play(mic_button_sound);
+                break;
+            }
+        }
+        return true;
+    }
+
     // Validate the user's input, if its correct, sign them in
     public void validate(String result){
         if(result.toLowerCase().equals("hello")) {
             String response = "";
-//            Intent intent = getIntent();
-//            String username = intent.getStringExtra("uname");
-//            Log.i("USERNAME", username);
             // Get username from profile page
             SharedPreferences profile = getSharedPreferences("Profile", Activity.MODE_PRIVATE);
             String username = profile.getString("Name", "");
@@ -125,7 +142,6 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
             DBOperations signIn = new DBOperations(this, "signIn");
             try {
                 // The Name needs to come from the profile page
-//                response = signIn.execute("Sean", "Coll", date).get();
                 response = signIn.execute(username, date).get();
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
@@ -141,5 +157,15 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
                 tapMessage.setText(response);
             }
         }
+    }
+
+    // Sets up the SoundPool and loads sounds
+    public void setUpSoundPool() {
+        custSoundPool = new CustomSoundPool();
+        custSoundPool.setCon(this);
+        custSoundPool.initialise();
+
+        mic_button_sound = custSoundPool.load(R.raw.mic_button_desc);
+        back_arrow_sound = custSoundPool.load(R.raw.go_back);
     }
 }

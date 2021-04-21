@@ -18,6 +18,8 @@
 
 package com.example.sign_in_register;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
@@ -33,6 +35,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -122,9 +125,20 @@ public class SpeechRecognition {
     public void checkPermission(Context con, Activity act)
     {
         if (ActivityCompat.checkSelfPermission(con, Manifest.permission.RECORD_AUDIO) !=
-                PackageManager.PERMISSION_GRANTED) ActivityCompat.requestPermissions(act,
-                new String[]{Manifest.permission.RECORD_AUDIO}, AUDIO_PERMISSION);
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(act,
+                    new String[]{Manifest.permission.RECORD_AUDIO}, AUDIO_PERMISSION);
+
+            if(ActivityCompat.checkSelfPermission(con, Manifest.permission.RECORD_AUDIO) ==
+                    PackageManager.PERMISSION_DENIED) {
+                act.finish();
+            }
+        }
+
     }
+
+
+
     // Start listening for user speech
     public void startListening() {
         fadeTrigger();

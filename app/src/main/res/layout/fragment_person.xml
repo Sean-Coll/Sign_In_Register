@@ -39,6 +39,7 @@
                     android:layout_below="@id/Profile_Picture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="30dp"
                     android:text="Name:"/>
@@ -49,13 +50,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Name"
                     android:layout_marginStart="30dp"
-                    android:minWidth="50dp" />
+                    android:minWidth="100dp" />
 
                 <TextView
                     android:id="@+id/Age"
                     android:layout_below="@id/Name_Edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="20dp"
                     android:text="Age:" />

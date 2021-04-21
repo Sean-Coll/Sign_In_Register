@@ -25,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sign_in_register.CustomSoundPool;
 import com.example.sign_in_register.ImageHandler;
 import com.example.sign_in_register.R;
 
@@ -35,6 +36,7 @@ public class personFragment extends Fragment {
     ImageView timetableImage, uploadButton, profilePicture;
     ImageHandler imageHandler, profilePicHandler;
     EditText nameEdit, ageEdit;
+    CustomSoundPool custSoundPool;
 
     public String getUsername() {
         return username;
@@ -44,6 +46,7 @@ public class personFragment extends Fragment {
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
     public static final int PROFILE_PICTURE_PICK = 3000;
+    int image_upload_sound, profile_picture_upload_sound;
 
     public personFragment() {
         // Required empty public constructor
@@ -92,6 +95,13 @@ public class personFragment extends Fragment {
                 }
             }
         });
+        uploadButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                custSoundPool.play(image_upload_sound);
+                return true;
+            }
+        });
 
         profilePicture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +126,13 @@ public class personFragment extends Fragment {
                 }
             }
         });
+        profilePicture.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                custSoundPool.play(profile_picture_upload_sound);
+                return true;
+            }
+        });
         imageHandler.loadImage();
     }
 
@@ -130,6 +147,8 @@ public class personFragment extends Fragment {
         timetableImage = (ImageView)view.findViewById(R.id.Timetable_Image);
         profilePicture = (ImageView)view.findViewById(R.id.Profile_Picture);
         LinearLayout background = (LinearLayout)view.findViewById(R.id.Profile);
+
+        setUpSoundPool();
 
         SharedPreferences userTheme = getActivity().getSharedPreferences("Theme", Activity.MODE_PRIVATE);
         int cur_size = userTheme.getInt("FontSize", 12);
@@ -258,5 +277,15 @@ public class personFragment extends Fragment {
         nameEdit.setText(profName);
         ageEdit.setText(Integer.toString(profAge));
 
+    }
+
+    // Sets up the SoundPool and loads sounds
+    public void setUpSoundPool() {
+        custSoundPool = new CustomSoundPool();
+        custSoundPool.setCon(getContext());
+        custSoundPool.initialise();
+
+        image_upload_sound = custSoundPool.load(R.raw.timetable_image_upload_desc);
+        profile_picture_upload_sound = custSoundPool.load(R.raw.profile_picture_upload_desc);
     }
 }

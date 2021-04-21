@@ -30,6 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sign_in_register.CustomSoundPool;
 import com.example.sign_in_register.ImageHandler;
 import com.example.sign_in_register.ImageLoader;
 import com.example.sign_in_register.R;
@@ -48,10 +49,11 @@ public class emergencyFragment extends Fragment {
     String textstyle;
     ImageView uploadButton, emergencyImage;
     ImageHandler imageHandler;
-
+    CustomSoundPool custSoundPool;
 
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
+    int image_upload_sound, phone_dial_sound;
 
     public emergencyFragment() {
         // Required empty public constructor
@@ -91,6 +93,14 @@ public class emergencyFragment extends Fragment {
             }
         });
 
+        phone_num.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                custSoundPool.play(phone_dial_sound);
+                return true;
+            }
+        });
+
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,6 +122,14 @@ public class emergencyFragment extends Fragment {
                     // If permission granted
                     pickImageFromGallery();
                 }
+            }
+        });
+
+        uploadButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                custSoundPool.play(image_upload_sound);
+                return true;
             }
         });
         imageHandler.loadImage();
@@ -140,7 +158,7 @@ public class emergencyFragment extends Fragment {
         phone_num.setTextSize(cur_size);
         phone_num.setTypeface(null, cur_fontstyle);
 
-
+        setUpSoundPool();
 
         imageHandler = new ImageHandler(emergencyImage, "emergencyImage.jpg");
     }
@@ -185,5 +203,15 @@ public class emergencyFragment extends Fragment {
     public void onResume() {
         super.onResume();
         imageHandler.loadImage();
+    }
+
+    // Sets up the SoundPool and loads sounds
+    public void setUpSoundPool() {
+        custSoundPool = new CustomSoundPool();
+        custSoundPool.setCon(getContext());
+        custSoundPool.initialise();
+
+        image_upload_sound = custSoundPool.load(R.raw.emergency_image_upload_desc);
+        phone_dial_sound = custSoundPool.load(R.raw.tap_to_dial);
     }
 }

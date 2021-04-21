@@ -24,6 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sign_in_register.CustomSoundPool;
 import com.example.sign_in_register.ImageHandler;
 import com.example.sign_in_register.LoginVoiceActivity;
 import com.example.sign_in_register.R;
@@ -48,11 +49,13 @@ public class signinFragment extends Fragment {
     String signedInDate;
     ImageView uploadButton, dayCentreImage;
     ImageHandler imageHandler;
+    CustomSoundPool custSoundPool;
 
     public static final String PREFS_NAME = "PreferenceFile";
     public static final String DATE = "date";
     public static final int PERMISSION_CODE = 1000;
     public static final int IMAGE_PICK = 2000;
+    int image_upload_sound, voice_sign_in_sound;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -106,6 +109,14 @@ public class signinFragment extends Fragment {
             }
         });
 
+        Voice_log.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                custSoundPool.play(voice_sign_in_sound);
+                return true;
+            }
+        });
+
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,6 +140,15 @@ public class signinFragment extends Fragment {
                 }
             }
         });
+
+        uploadButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                custSoundPool.play(image_upload_sound);
+                return true;
+            }
+        });
+
         imageHandler.loadImage();
     }
 
@@ -153,6 +173,8 @@ public class signinFragment extends Fragment {
         CurTime.setTypeface(null, cur_fontstyle);
 
         imageHandler = new ImageHandler(dayCentreImage, "dayCentre.jpg");
+
+        setUpSoundPool();
     }
 
     public void pickImageFromGallery() {
@@ -275,5 +297,15 @@ public class signinFragment extends Fragment {
     public void loadDate() {
         SharedPreferences sp = this.getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         signedInDate = sp.getString(DATE, "");
+    }
+
+    // Sets up the SoundPool and loads sounds
+    public void setUpSoundPool() {
+        custSoundPool = new CustomSoundPool();
+        custSoundPool.setCon(getContext());
+        custSoundPool.initialise();
+
+        image_upload_sound = custSoundPool.load(R.raw.day_centre_image_upload_desc);
+        voice_sign_in_sound = custSoundPool.load(R.raw.voice_sign_in_desc);
     }
 }

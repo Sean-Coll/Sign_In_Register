@@ -23,6 +23,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.sign_in_register.AdminPage;
+import com.example.sign_in_register.CustomSoundPool;
 import com.example.sign_in_register.Item;
 import com.example.sign_in_register.ItemAdapter;
 import com.example.sign_in_register.R;
@@ -37,10 +38,12 @@ public class settingFragment extends Fragment {
     private Button reset, apply;
     private Spinner Theme,Fontstyle;
     int numTaps,cur_size,origin_size,cur_fontstyle,fontstyle; // The number of times the user has tapped the logo. currently font size
+    int font_size_sound, theme_sound;
     View view;
     TextView displaytext;
     String theme,cur_theme;
     SharedPreferences userTheme;
+    CustomSoundPool custSoundPool;
 
     // create and set spinner array
     final int[] Fontstylearray = {0,1,2,3};
@@ -154,6 +157,7 @@ public class settingFragment extends Fragment {
         seekbar.setProgress(origin_size);
         background.setBackgroundColor(Color.parseColor(theme));
 
+        setUpSoundPool();
 
         //create item object without extraparameter, if you want with some other feature, use extra Parameter
         Item FontSize = new Item("Font Setting","Change font size");
@@ -260,5 +264,33 @@ public class settingFragment extends Fragment {
             }
         });
 
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
+                switch(position) {
+                    case 0: {
+                        custSoundPool.play(font_size_sound);
+                        break;
+                    }
+
+                    case 1: {
+                        custSoundPool.play(theme_sound);
+                        break;
+                    }
+                }
+                return true;
+            }
+        });
+
     }   //inited
+
+    // Sets up the SoundPool and loads sounds
+    public void setUpSoundPool() {
+        custSoundPool = new CustomSoundPool();
+        custSoundPool.setCon(getContext());
+        custSoundPool.initialise();
+
+        font_size_sound = custSoundPool.load(R.raw.font_size_desc);
+        theme_sound = custSoundPool.load(R.raw.theme_desc);
+    }
 }
