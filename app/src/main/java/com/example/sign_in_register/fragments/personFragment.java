@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +34,7 @@ public class personFragment extends Fragment {
     TextView name, age;
     ImageView timetableImage, uploadButton, profilePicture;
     ImageHandler imageHandler, profilePicHandler;
+    EditText nameEdit, ageEdit;
 
     public String getUsername() {
         return username;
@@ -121,8 +124,8 @@ public class personFragment extends Fragment {
         name = (TextView)view.findViewById(R.id.Name);
         age = (TextView)view.findViewById(R.id.Age);
 
-        EditText nameEdit = (EditText)view.findViewById(R.id.Name_Edit);
-        EditText ageEdit = (EditText)view.findViewById(R.id.Age_Edit);
+        nameEdit = (EditText)view.findViewById(R.id.Name_Edit);
+        ageEdit = (EditText)view.findViewById(R.id.Age_Edit);
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         timetableImage = (ImageView)view.findViewById(R.id.Timetable_Image);
         profilePicture = (ImageView)view.findViewById(R.id.Profile_Picture);
@@ -142,10 +145,57 @@ public class personFragment extends Fragment {
 
         nameEdit.setTextSize(cur_size);
         nameEdit.setTypeface(null, cur_fontstyle);
+        nameEdit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                SharedPreferences profile = getActivity().getSharedPreferences("Profile", Activity.MODE_PRIVATE);
+                SharedPreferences.Editor profEditor = profile.edit();
+                profEditor.putString("Name", nameEdit.getText().toString());
+                profEditor.apply();
+            }
+        });
        // nameEdit.setBackgroundColor(Color.parseColor("#FFFFFFFF"));   use to change the background of edittext
 
         ageEdit.setTextSize(cur_size);
         ageEdit.setTypeface(null, cur_fontstyle);
+        ageEdit.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                // If its not blank
+                if(!ageEdit.getText().toString().equals("")) {
+                    SharedPreferences profile = getActivity().getSharedPreferences("Profile", Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor profEditor = profile.edit();
+                    profEditor.putInt("Age", Integer.parseInt(String.valueOf(ageEdit.getText())));
+                    profEditor.apply();
+                }
+                else {
+                    SharedPreferences profile = getActivity().getSharedPreferences("Profile", Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor profEditor = profile.edit();
+                    profEditor.putInt("Age", 0);
+                    profEditor.apply();
+                }
+            }
+        });
         // ageEdit.setBackgroundColor(Color.parseColor("#FFFFFFFF"));   use to change the background of edittext
 
 
@@ -198,5 +248,15 @@ public class personFragment extends Fragment {
         imageHandler.loadImage();
         profilePicHandler.loadImage();
         username = name.getText().toString();
+        loadDetails();
+    }
+
+    public void loadDetails() {
+        SharedPreferences profile = getActivity().getSharedPreferences("Profile", Activity.MODE_PRIVATE);
+        String profName = profile.getString("Name", "");
+        int profAge = profile.getInt("Age", 0);
+        nameEdit.setText(profName);
+        ageEdit.setText(Integer.toString(profAge));
+
     }
 }

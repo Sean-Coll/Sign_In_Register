@@ -27,57 +27,56 @@
 
                 <ImageView
                     android:id="@+id/Profile_Picture"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
                     android:src="@drawable/person_icon"
                     android:contentDescription="@string/profile_pictureCD"/>
 
                 <TextView
                     android:id="@+id/Name"
-                    android:layout_toEndOf="@id/Profile_Picture"
+                    android:layout_below="@id/Profile_Picture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="30dp"
                     android:text="Name:"/>
 
                 <EditText
                     android:id="@+id/Name_Edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/Name"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="40dp"
-                    android:minWidth="100dp"/>
+                    android:layout_below="@id/Name"
+                    android:layout_marginStart="30dp"
+                    android:minWidth="50dp" />
 
                 <TextView
                     android:id="@+id/Age"
-                    android:layout_toEndOf="@id/Profile_Picture"
-                    android:layout_below="@id/Name"
+                    android:layout_below="@id/Name_Edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="20dp"
-                    android:text="Age:"/>
+                    android:text="Age:" />
 
                 <EditText
                     android:id="@+id/Age_Edit"
+                    android:inputType="numberSigned"
+                    android:maxLength="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toEndOf="@id/Age"
-                    android:layout_below="@id/Name_Edit"
-                    android:layout_marginStart="3dp"
-                    android:minWidth="50dp"/>
+                    android:layout_below="@id/Age"
+                    android:layout_marginStart="30dp"
+                    android:minWidth="20dp"/>
 
                 <ImageView
                     android:id="@+id/Timetable_Image"
-                    android:layout_below="@id/Age"
+                    android:layout_below="@id/Age_Edit"
                     android:layout_centerInParent="true"
                     android:layout_width="320dp"
                     android:layout_height="350dp"
-                    android:layout_marginTop="50dp" />
+                    android:layout_marginTop="30dp" />
 
                 <ImageView
                     android:id="@+id/Upload_Button"

@@ -18,10 +18,10 @@
     </string-array>
 
     <string-array name = "theme">
-        <item>white</item>
-        <item>red</item>
-        <item>teal</item>
-        <item>purple</item>
+        <item>White</item>
+        <item>Red</item>
+        <item>Teal</item>
+        <item>Purple</item>
     </string-array>
 
 </resources>
