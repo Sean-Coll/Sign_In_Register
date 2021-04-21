@@ -1836,6 +1836,7 @@ id Name_Edit
 id No_Entries
 id Phone_No
 id Pre_view
+id Profile
 id Profile_Picture
 id QR_sign_in
 id Reset
@@ -2611,7 +2612,7 @@ string sync_header
 string sync_title
 string tap_message_voice
 string tap_mic_arrowCD
-string tap_to_call
+string tap_to_dial
 string upload_buttonCD
 string v7_preference_off
 string v7_preference_on

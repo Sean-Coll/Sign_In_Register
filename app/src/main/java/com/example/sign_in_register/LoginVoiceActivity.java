@@ -122,7 +122,6 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
                 // The Name needs to come from the profile page
                 response = signIn.execute("Sean", "Coll", date).get();
 //                response = signIn.execute(username, date).get();
-                Toast.makeText(this,response,Toast.LENGTH_LONG).show();
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }
@@ -132,7 +131,7 @@ public class LoginVoiceActivity extends AppCompatActivity implements View.OnClic
                 finish();
             }
             // If the server is down
-            else if(response.equals("Server Error")) {
+            else if(response.equals("Server is unavailable")) {
                 tapMessage.setText("");
                 tapMessage.setText(response);
             }

@@ -126,7 +126,7 @@ public class personFragment extends Fragment {
         uploadButton = (ImageView)view.findViewById(R.id.Upload_Button);
         timetableImage = (ImageView)view.findViewById(R.id.Timetable_Image);
         profilePicture = (ImageView)view.findViewById(R.id.Profile_Picture);
-        LinearLayout background = (LinearLayout)view.findViewById(R.id.Emergency);
+        LinearLayout background = (LinearLayout)view.findViewById(R.id.Profile);
 
         SharedPreferences userTheme = getActivity().getSharedPreferences("Theme", Activity.MODE_PRIVATE);
         int cur_size = userTheme.getInt("FontSize", 12);

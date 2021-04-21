@@ -107,7 +107,7 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 return sb.toString().trim();
             } catch (IOException e) {
                 e.printStackTrace();
-                return "Server Error";
+                return "Server is unavailable";
             }
         }
         // This method will sign the user in
@@ -160,11 +160,11 @@ public class DBOperations extends AsyncTask<String,Void,String> {
                 return "Login Successful";
             } catch (IOException e) {
                 e.printStackTrace();
-                return "Server Error";
+                return "Server is unavailable";
             }
         }
         // Something went wrong along the way the server is probably down.
-        return "ERROR. The server is down.";
+        return "ERROR. Server is unavailable.";
     }
 
     @Override

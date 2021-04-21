@@ -62,7 +62,7 @@ public class AdminPage extends AppCompatActivity implements View.OnClickListener
                     // Execute the operation
                     String result = getDataForDate.execute(date).get();
                     // If the server is down
-                    if(result.equals("Server Error")) {
+                    if(result.equals("Server is unavailable")) {
                         noEntries.setText(""); // Clear the TextView
                         list.setAdapter(null); // Clear the ListView
                         noEntries.setText(result);
