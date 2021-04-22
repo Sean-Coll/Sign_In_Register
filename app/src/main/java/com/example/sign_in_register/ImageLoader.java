@@ -1,11 +1,8 @@
 package com.example.sign_in_register;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.ColorSpace;
 import android.os.AsyncTask;
-import android.os.Environment;
 
 import java.io.File;
 import java.io.FileInputStream;

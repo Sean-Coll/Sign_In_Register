@@ -1,6 +1,5 @@
 package com.example.sign_in_register;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;

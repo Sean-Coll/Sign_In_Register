@@ -62,7 +62,7 @@ public class signinFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         loadDate();
-        signedInDate = " "; // FOR DEBUGGING ONLY
+//        signedInDate = " "; // FOR DEBUGGING ONLY
     }
 
     @Override

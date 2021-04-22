@@ -37,7 +37,7 @@
 20-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:14:22-78
 21
 22    <application
-22-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:16:5-49:19
+22-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:16:5-41:19
 23        android:allowBackup="true"
 23-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:17:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -76,32 +76,18 @@
 42        </activity>
 43        <activity
 43-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:33:9-36:20
-44            android:name="com.example.sign_in_register.LocationSelectionActivity"
-44-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:34:13-54
+44            android:name="com.example.sign_in_register.LoginVoiceActivity"
+44-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:34:13-47
 45            android:screenOrientation="portrait" >
 45-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:35:13-49
 46        </activity>
 47        <activity
 47-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:37:9-40:20
-48            android:name="com.example.sign_in_register.HelpActivity"
-48-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:38:13-41
+48            android:name="com.example.sign_in_register.AdminPage"
+48-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:38:13-38
 49            android:screenOrientation="portrait" >
 49-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:39:13-49
 50        </activity>
-51        <activity
-51-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:41:9-44:20
-52            android:name="com.example.sign_in_register.LoginVoiceActivity"
-52-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:42:13-47
-53            android:screenOrientation="portrait" >
-53-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:43:13-49
-54        </activity>
-55        <activity
-55-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:45:9-48:20
-56            android:name="com.example.sign_in_register.AdminPage"
-56-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:46:13-38
-57            android:screenOrientation="portrait" >
-57-->/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/AndroidManifest.xml:47:13-49
-58        </activity>
-59    </application>
-60
-61</manifest>
+51    </application>
+52
+53</manifest>

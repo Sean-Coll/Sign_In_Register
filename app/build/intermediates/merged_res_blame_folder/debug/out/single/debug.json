@@ -40,10 +40,6 @@
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_help_page.xml.flat",
-        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/help_page.xml"
-    },
-    {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -82,10 +78,6 @@
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_fragment_person.xml.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/fragment_person.xml"
-    },
-    {
-        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
-        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/activity_main.xml"
     },
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_mic_button_desc.mp3.flat",
@@ -146,10 +138,6 @@
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/layout_homeorcampus.xml.flat",
-        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/layout/homeorcampus.xml"
     },
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_person_icon.png.flat",
@@ -294,10 +282,6 @@
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_profile_picture_upload_desc.mp3.flat",
         "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/raw/profile_picture_upload_desc.mp3"
-    },
-    {
-        "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/drawable_white.png.flat",
-        "source": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/src/main/res/drawable/white.png"
     },
     {
         "merged": "/Users/seancoll/AndroidStudioProjects/Sign_In_Register/app/build/intermediates/res/merged/debug/raw_emergency.mp3.flat",

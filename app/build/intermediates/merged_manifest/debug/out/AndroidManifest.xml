@@ -41,14 +41,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.sign_in_register.LocationSelectionActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.sign_in_register.HelpActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name="com.example.sign_in_register.LoginVoiceActivity"
             android:screenOrientation="portrait" >
         </activity>

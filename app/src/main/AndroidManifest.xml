@@ -31,14 +31,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LocationSelectionActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".HelpActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
             android:name=".LoginVoiceActivity"
             android:screenOrientation="portrait">
         </activity>
